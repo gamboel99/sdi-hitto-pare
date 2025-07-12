@@ -52,6 +52,13 @@
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
+    section {
+      margin-top: 40px;
+    }
+    h2 {
+      color: #006600;
+      margin-bottom: 10px;
+    }
     footer {
       text-align: center;
       background-color: #006600;
@@ -60,8 +67,17 @@
       margin-top: 40px;
       font-size: 13px;
     }
-    h2 {
-      color: #006600;
+    .image-preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .image-preview img {
+      width: 160px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -99,6 +115,34 @@
       <li>📄 Pendaftaran Siswa Baru Online</li>
       <li>💬 Pengaduan & Kontak Sekolah Langsung</li>
     </ul>
+
+    <section>
+      <h2>📅 Agenda Sekolah Terbaru</h2>
+      <p>Berikut adalah ringkasan agenda kegiatan SDI Hitto selama tahun ajaran:</p>
+      <ul>
+        <li>✅ Januari: Pembukaan Semester & Penilaian Awal</li>
+        <li>✅ Februari: Lomba Peringatan Isra’ Mi’raj</li>
+        <li>✅ Maret: Try Out Ujian Sekolah</li>
+        <li>✅ April: Ujian Sekolah & Kegiatan Ramadhan</li>
+        <li>✅ Juni: Kegiatan Kenaikan Kelas</li>
+        <li>✅ Juli: MPLS & PPDB</li>
+        <li>✅ Oktober: Perayaan Maulid Nabi & Classmeeting</li>
+        <li>📌 *Jadwal dapat berubah sewaktu-waktu*</li>
+      </ul>
+      <p><a href="agenda.html">Lihat Agenda Lengkap »</a></p>
+    </section>
+
+    <section>
+      <h2>📸 Dokumentasi Kegiatan Terbaru</h2>
+      <p>Beberapa momen kegiatan siswa dan sekolah SDI Hitto:</p>
+      <div class="image-preview">
+        <img src="uploads/dok1.jpg" alt="Kegiatan 1">
+        <img src="uploads/dok2.jpg" alt="Kegiatan 2">
+        <img src="uploads/dok3.jpg" alt="Kegiatan 3">
+        <img src="uploads/dok4.jpg" alt="Kegiatan 4">
+      </div>
+      <p><a href="dokumentasi.html">Lihat Semua Dokumentasi »</a></p>
+    </section>
   </div>
 
   <footer>
