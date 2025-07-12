@@ -1,56 +1,96 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Perpustakaan Digital - SDI Hitto</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <title>Perpustakaan - SDI Hitto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #006600;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 0 0 10px 10px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .book-list {
+      margin-top: 20px;
+    }
+
+    .book-list ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .note {
+      margin-top: 30px;
+      background-color: #fff9c4;
+      padding: 15px;
+      border-left: 5px solid #fbc02d;
+      border-radius: 6px;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #006600;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    a.button:hover {
+      background-color: #004d00;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <div class="header-container">
-      <img src="assets/img/logo.png" alt="Logo SDI Hitto" class="logo">
-      <div class="title-group">
-        <h1>SD ISLAM HIDAYATUTH THOLIBIN</h1>
-        <p>Cerdas & Islami</p>
-      </div>
-    </div>
-    <nav>
-      <a href="index.html">🏠 Beranda</a>
-      <a href="profil.html">📘 Profil</a>
-      <a href="struktur.html">🏫 Struktur</a>
-      <a href="perpustakaan.html" class="active">📚 Perpustakaan</a>
-      <a href="fasilitas.html">🏢 Fasilitas</a>
-      <a href="ekstrakurikuler.html">🎓 Ekstrakurikuler</a>
-      <a href="kontak.html">📞 Kontak</a>
-      <a href="ppdb.html">📄 PPDB</a>
-      <a href="ujian.html">📝 Ujian</a>
-      <a href="pengaduan.html">📣 Pengaduan</a>
-      <a href="yayasan.html">🏛️ Yayasan</a>
-    </nav>
+    <h1>📚 Perpustakaan Digital SDI Hitto</h1>
   </header>
 
-  <main>
-    <section>
-      <h2>📚 Perpustakaan Digital SDI Hitto</h2>
-      <p>
-        Selamat datang di perpustakaan digital SDI Hitto. Di sini, siswa dapat mengakses berbagai materi bacaan, buku pelajaran, dan referensi Islam secara online.
-      </p>
+  <div class="container">
+    <h2>Daftar Buku yang Tersedia</h2>
+    <div class="book-list">
       <ul>
-        <li><strong>Buku Tematik Kelas 1–6</strong></li>
-        <li><strong>Materi Pelajaran Agama Islam</strong></li>
-        <li><strong>Dongeng Islami dan Cerita Anak</strong></li>
-        <li><strong>Ensiklopedia Anak</strong></li>
-        <li><strong>Majalah Digital Pendidikan</strong></li>
-        <li><strong>Link unduh E-Book (akan diperbarui berkala)</strong></li>
+        <li>Buku Tematik Kelas 1–6 (Semester 1 & 2)</li>
+        <li>Ensiklopedia Sains Anak</li>
+        <li>Kisah 25 Nabi dan Rasul</li>
+        <li>Juz Amma Bergambar</li>
+        <li>Komik Pendidikan Islami</li>
+        <li>Seri Cerita Anak Cerdas & Sholeh</li>
+        <li>Buku Praktik Ibadah Sehari-hari</li>
       </ul>
+    </div>
 
-      <p><em>Fitur perpustakaan digital ini masih dalam tahap pengembangan. Nantikan daftar buku elektronik & akses login untuk siswa.</em></p>
-    </section>
-  </main>
+    <div class="note">
+      📌 Fitur perpustakaan digital masih dalam pengembangan.  
+      Dalam waktu dekat, siswa akan dapat mengakses buku secara online langsung dari halaman ini.
+    </div>
 
-  <footer>
-    <p>Developed by <strong>CV. Mitra Utama Consultindo (MUC)</strong></p>
-  </footer>
+    <a href="index.html" class="button">⬅️ Kembali ke Beranda</a>
+  </div>
+
 </body>
 </html>
