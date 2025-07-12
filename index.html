@@ -1,93 +1,29 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>SDI Hitto - Beranda</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #e9f7ef;
-    }
-    header {
-      background-color: #006600;
-      color: white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    header img {
-      height: 60px;
-    }
-    .title h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    nav {
-      background-color: #009933;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 10px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 5px 10px;
-      padding: 8px 14px;
-      border-radius: 6px;
-      background-color: #006600;
-      font-size: 14px;
-    }
-    nav a:hover {
-      background-color: #00cc44;
-    }
-    .container {
-      max-width: 960px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    section {
-      margin-top: 40px;
-    }
-    h2 {
-      color: #006600;
-      margin-bottom: 10px;
-    }
-    footer {
-      text-align: center;
-      background-color: #006600;
-      color: white;
-      padding: 15px;
-      margin-top: 40px;
-      font-size: 13px;
-    }
-    .image-preview {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .image-preview img {
-      width: 160px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
+    body { font-family: 'Poppins', sans-serif; margin: 0; background: #e9f7ef; }
+    header, nav, .container, footer { max-width: 960px; margin: auto; }
+    header { background: #006600; color: #fff; padding: 20px; display: flex; align-items: center; gap: 15px; }
+    nav { background: #009933; display: flex; flex-wrap: wrap; justify-content: center; padding: 10px; }
+    nav a { color: #fff; padding: 6px 12px; margin: 4px; text-decoration: none; border-radius: 4px; background: #006600; }
+    nav a:hover { background: #00cc44; }
+    .container { padding: 30px; background: #fff; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    section { margin-top: 30px; }
+    h2 { color: #006600; }
+    .image-preview { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+    .image-preview img { width: 160px; height: 100px; object-fit: cover; border-radius: 6px; }
+    footer { text-align: center; background: #006600; color: #fff; padding: 12px; margin-top: 30px; font-size: 13px; }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="uploads/logo.png" alt="Logo SDI Hitto" />
-    <div class="title">
-      <h1>SDI Hidayatuth Tholibin</h1>
-    </div>
+    <img src="uploads/logo.png" alt="Logo SDI Hitto" height="60">
+    <h1 style="margin:0; font-size: 24px;">SDI Hidayatuth Tholibin</h1>
   </header>
 
   <nav>
@@ -99,39 +35,40 @@
     <a href="agenda.html">📅 Agenda</a>
     <a href="dokumentasi.html">📸 Dokumentasi</a>
     <a href="ujian.html">📝 Hasil Ujian</a>
-    <a href="ppdb.html">📄 PPDB Online</a>
+    <a href="ppdb.html">📄 PPDB</a>
     <a href="pengaduan.html">📣 Pengaduan</a>
-    <a href="yayasan.html">🏛️ Struktur Yayasan</a>
+    <a href="yayasan.html">🏛️ Yayasan</a>
     <a href="kontak.html">📞 Kontak</a>
   </nav>
 
   <div class="container">
-    <h2>Selamat Datang di Website Resmi SDI Hitto</h2>
-    <p>SDI Hidayatuth Tholibin merupakan sekolah dasar berbasis Islam yang berada di Desa Tertek, Pare, Kediri. Website ini menyediakan informasi lengkap tentang profil sekolah, program pendidikan, kegiatan ekstrakurikuler, jadwal PPDB, hasil ujian, dan berbagai dokumentasi lainnya.</p>
-
-    <ul>
-      <li>📚 Sistem Informasi Sekolah Modern</li>
-      <li>🎓 Pendidikan Islami & Umum Terpadu</li>
-      <li>📸 Dokumentasi Kegiatan & Agenda Tahunan</li>
-      <li>📄 Pendaftaran Siswa Baru Online</li>
-      <li>💬 Pengaduan & Kontak Sekolah Langsung</li>
-    </ul>
+    <h2>Selamat Datang</h2>
+    <p>Website resmi SDI Hitto — informasi kegiatan, agenda, PPDB, dokumentasi, dan lain-lain.</p>
 
     <section>
       <h2>📅 Agenda Sekolah Terbaru</h2>
       <ul>
-        <li>✅ Januari: Pembukaan Semester & Penilaian Awal</li>
-        <li>✅ Februari: Lomba Peringatan Isra’ Mi’raj</li>
-        <li>✅ Maret: Try Out Ujian Sekolah</li>
-        <li>✅ April: Ujian Sekolah & Kegiatan Ramadhan</li>
-        <li>✅ Juni: Kegiatan Kenaikan Kelas</li>
+        <li>✅ Januari: Pembukaan Semester</li>
+        <li>✅ Februari: Isra’ Mi’raj</li>
+        <li>✅ Maret: Try Out</li>
+        <li>✅ April: Ujian & Ramadhan</li>
+        <li>✅ Juni: Kenaikan Kelas</li>
         <li>✅ Juli: MPLS & PPDB</li>
-        <li>✅ Oktober: Perayaan Maulid Nabi & Classmeeting</li>
-        <li>📌 *Jadwal dapat berubah sewaktu-waktu*</li>
+        <li>✅ Oktober: Maulid & Class Meeting</li>
       </ul>
-      <p><a href="agenda.html">Lihat Agenda Lengkap »</a></p>
+      <p><a href="agenda.html">Lihat selengkapnya »</a></p>
     </section>
 
+    <section>
+      <h2>📸 Dokumentasi Kegiatan</h2>
+      <div class="image-preview">
+        <img src="uploads/dok1.jpg" alt="Dokumentasi 1">
+        <img src="uploads/dok2.jpg" alt="Dokumentasi 2">
+        <img src="uploads/dok3.jpg" alt="Dokumentasi 3">
+        <img src="uploads/dok4.jpg" alt="Dokumentasi 4">
+      </div>
+      <p><a href="dokumentasi.html">Lihat semua dokumentasi »</a></p>
+    </section>
   </div>
 
   <footer>
