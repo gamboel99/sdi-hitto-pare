@@ -1,139 +1,130 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Struktur Organisasi - SDI Hitto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #f5fff5;
+      background-color: #e9f7ef;
     }
-
     header {
       background-color: #006600;
       color: white;
       padding: 20px;
-    }
-
-    .header-container {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
     }
-
-    .logo {
+    header img {
       height: 60px;
-      border-radius: 8px;
     }
-
-    .title-group h1 {
+    .title h1 {
       margin: 0;
       font-size: 24px;
     }
-
-    .title-group p {
-      margin: 0;
-      font-size: 14px;
-    }
-
     nav {
-      margin-top: 10px;
+      background-color: #009933;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
     }
-
     nav a {
       color: white;
-      margin-right: 15px;
       text-decoration: none;
-      font-weight: bold;
+      margin: 5px 10px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background-color: #006600;
+      font-size: 14px;
     }
-
-    nav a.active {
-      text-decoration: underline;
+    nav a:hover {
+      background-color: #00cc44;
     }
-
-    main {
+    .container {
+      max-width: 960px;
+      margin: 30px auto;
+      background: white;
       padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-
-    section h2 {
+    h2 {
       color: #006600;
     }
-
     ul {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #c8e6c9;
-      max-width: 600px;
+      line-height: 1.8;
     }
-
     footer {
       text-align: center;
+      background-color: #006600;
+      color: white;
       padding: 15px;
-      background-color: #f1f1f1;
       margin-top: 40px;
-      font-size: 14px;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="header-container">
-      <img src="https://raw.githubusercontent.com/gamboel99/sdi-hitto/main/uploads/logo.png" alt="Logo SDI Hitto" class="logo">
-      <div class="title-group">
-        <h1>SD ISLAM HIDAYATUTH THOLIBIN</h1>
-        <p>Website Resmi - Cerdas & Islami</p>
-      </div>
+    <img src="uploads/logo.png" alt="Logo SDI Hitto">
+    <div class="title">
+      <h1>SDI Hidayatuth Tholibin</h1>
     </div>
-    <nav>
-      <a href="index.html">🏠 Beranda</a>
-      <a href="profil.html">📘 Profil</a>
-      <a href="struktur.html" class="active">🏫 Struktur</a>
-      <a href="perpustakaan.html">📚 Perpustakaan</a>
-      <a href="fasilitas.html">🏢 Fasilitas</a>
-      <a href="ekstrakurikuler.html">🎓 Ekstrakurikuler</a>
-      <a href="ppdb.html">📄 PPDB</a>
-      <a href="ujian.html">📝 Ujian</a>
-      <a href="agenda.html">🗓️ Agenda</a>
-      <a href="dokumentasi.html">📷 Dokumentasi</a>
-      <a href="pengaduan.html">📣 Pengaduan</a>
-      <a href="yayasan.html">🏛️ Yayasan</a>
-      <a href="kontak.html">📞 Kontak</a>
-    </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Struktur Organisasi SDI Hitto</h2>
-      <ul style="line-height: 1.8;">
-        <li><strong>Kepala Sekolah:</strong> Alfia Indra Oktafiani</li>
-        <li><strong>Wakil Kepala Sekolah:</strong> (diisi kemudian)</li>
-        <li><strong>Wakil Kepala Bidang Kurikulum:</strong> (diisi)</li>
-        <li><strong>Wakil Kepala Bidang Kesiswaan:</strong> (diisi)</li>
-        <li><strong>Guru Kelas 1:</strong> (diisi)</li>
-        <li><strong>Guru Kelas 2:</strong> (diisi)</li>
-        <li><strong>Guru Kelas 3:</strong> (diisi)</li>
-        <li><strong>Guru Kelas 4:</strong> (diisi)</li>
-        <li><strong>Guru Kelas 5:</strong> (diisi)</li>
-        <li><strong>Guru Kelas 6:</strong> (diisi)</li>
-        <li><strong>Guru Ekstrakurikuler Pramuka:</strong> (diisi) </li> 
-        <li><strong>Guru Ekstrakurikuler Tari:</strong> (diisi) </li> 
-        <li><strong>Guru Ekstrakurikuler Lalaran:</strong> (diisi) </li> 
-        <li><strong>Guru Ekstrakurikuler Rebana:</strong> (diisi) </li> 
-        <li><strong>Guru Ekstrakurikuler Marching Band:</strong> (diisi) </li> 
-        <li><strong>Guru Ekstrakurikuler TI/Komputer:</strong> (diisi) </li> 
-        <li><strong>Guru Ekstrakurikuler Qiro'ah:</strong> (diisi) </li> 
-        <li><strong>Tenaga Administrasi & Keuangan:</strong> (diisi)</li>
-        <li><strong>Operator Sekolah:</strong> (diisi)</li>
-        <li><strong>Penjaga Sekolah:</strong> (diisi)</li>
-      </ul>
-    </section>
-  </main>
+  <nav>
+    <a href="index.html">🏠 Beranda</a>
+    <a href="profil.html">📘 Profil</a>
+    <a href="struktur.html">📋 Struktur</a>
+    <a href="fasilitas.html">🏫 Fasilitas</a>
+    <a href="ekstrakurikuler.html">🎓 Ekstrakurikuler</a>
+    <a href="agenda.html">📅 Agenda</a>
+    <a href="dokumentasi.html">📸 Dokumentasi</a>
+    <a href="ujian.html">📝 Hasil Ujian</a>
+    <a href="ppdb.html">📄 PPDB Online</a>
+    <a href="pengaduan.html">📣 Pengaduan</a>
+    <a href="yayasan.html">🏛️ Struktur Yayasan</a>
+    <a href="kontak.html">📞 Kontak</a>
+  </nav>
+
+  <div class="container">
+    <h2>📋 Struktur Organisasi SDI Hitto</h2>
+    <p>Berikut adalah struktur organisasi lengkap SDI Hidayatuth Tholibin:</p>
+    <ul>
+      <li><strong>Kepala Sekolah:</strong> Alfia Indra Oktafiani</li>
+      <li><strong>Wakil Kepala Sekolah:</strong> (diisi kemudian)</li>
+      <li><strong>Koordinator Kurikulum:</strong> (diisi)</li>
+      <li><strong>Koordinator Kesiswaan:</strong> (diisi)</li>
+      <li><strong>Guru Kelas 1:</strong> (diisi)</li>
+      <li><strong>Guru Kelas 2:</strong> (diisi)</li>
+      <li><strong>Guru Kelas 3:</strong> (diisi)</li>
+      <li><strong>Guru Kelas 4:</strong> (diisi)</li>
+      <li><strong>Guru Kelas 5:</strong> (diisi)</li>
+      <li><strong>Guru Kelas 6:</strong> (diisi)</li>
+      <li><strong>Guru Ekstrakurikuler Pramuka:</strong> (diisi)</li>
+      <li><strong>Guru Ekstrakurikuler Tari:</strong> (diisi)</li>
+      <li><strong>Guru Ekstrakurikuler Lalaran:</strong> (diisi)</li>
+      <li><strong>Guru Ekstrakurikuler Rebana:</strong> (diisi)</li>
+      <li><strong>Guru Ekstrakurikuler Marching Band:</strong> (diisi)</li>
+      <li><strong>Guru Ekstrakurikuler TI/Komputer:</strong> (diisi)</li>
+      <li><strong>Guru Ekstrakurikuler Qiro'ah:</strong> (diisi)</li>
+      <li><strong>Tenaga Administrasi & Keuangan:</strong> (diisi)</li>
+      <li><strong>Operator Sekolah:</strong> (diisi)</li>
+      <li><strong>Penjaga Sekolah:</strong> (diisi)</li>
+      <li><strong>Petugas Kebersihan:</strong> (diisi)</li>
+      <li><strong>Satpam/Keamanan:</strong> (diisi)</li>
+    </ul>
+    <p><a href="index.html">« Kembali ke Beranda</a></p>
+  </div>
 
   <footer>
-    <p>Developed by <strong>CV. Mitra Utama Consultindo (MUC)</strong></p>
+    © 2025 SDI Hitto | Developed by CV. Mitra Utama Consultindo (MUC)
   </footer>
+
 </body>
 </html>
