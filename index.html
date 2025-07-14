@@ -8,12 +8,9 @@
   <meta name="author" content="SDI Hidayatuth Tholibin">
   <title>SDI Hitto - Beranda</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
       background: #f0fdf4;
@@ -85,17 +82,54 @@
       border: 2px solid #e0f2f1;
     }
     footer {
-      text-align: center;
-      background-color: #2e7d32;
+      background: #2e7d32;
       color: white;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: 50px;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .footer-col {
+      flex: 1 1 200px;
+    }
+    .footer-col h4 {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+    .footer-col ul li a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .footer-col ul li a:hover {
+      text-decoration: underline;
+    }
+    .social-icons a {
+      color: white;
+      margin-right: 12px;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: #d0f5c1;
+    }
+    .footer-bottom {
+      text-align: center;
+      background-color: #1b5e20;
+      padding: 12px;
+      font-size: 13px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-
   <header>
     <img src="uploads/logo.png" alt="Logo SDI Hitto">
     <h1>SDI Hidayatuth Tholibin</h1>
@@ -123,11 +157,11 @@
     <p>SDI Hidayatuth Tholibin merupakan sekolah dasar berbasis Islam yang berada di Desa Tertek, Pare, Kediri. Website ini menyediakan informasi lengkap tentang profil sekolah, program pendidikan, kegiatan ekstrakurikuler, jadwal PPDB, hasil ujian, dan berbagai dokumentasi lainnya.</p>
 
     <ul>
-      <li>📚 Sistem Informasi Sekolah Modern</li>
-      <li>🎓 Pendidikan Islami & Umum Terpadu</li>
-      <li>📸 Dokumentasi Kegiatan & Agenda Tahunan</li>
-      <li>📄 Pendaftaran Siswa Baru Online</li>
-      <li>💬 Pengaduan & Kontak Sekolah Langsung</li>
+      <li><i class="fas fa-book"></i> Sistem Informasi Sekolah Modern</li>
+      <li><i class="fas fa-graduation-cap"></i> Pendidikan Islami & Umum Terpadu</li>
+      <li><i class="fas fa-camera"></i> Dokumentasi Kegiatan & Agenda Tahunan</li>
+      <li><i class="fas fa-file-alt"></i> Pendaftaran Siswa Baru Online</li>
+      <li><i class="fas fa-comments"></i> Pengaduan & Kontak Sekolah Langsung</li>
     </ul>
 
     <section>
@@ -157,8 +191,31 @@
   </div>
 
   <footer>
-    © 2025 SDI Hitto | Developed by CV. Mitra Utama Consultindo (MUC)
+    <div class="footer-col">
+      <h4>Alamat Sekolah</h4>
+      <p>SDI Hidayatuth Tholibin<br>Desa Tertek, Kec. Pare<br>Kab. Kediri, Jawa Timur</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pintasan</h4>
+      <ul>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="ppdb.html">PPDB</a></li>
+        <li><a href="pengaduan.html">Pengaduan</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Media Sosial</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
   </footer>
+  <div class="footer-bottom">
+    © 2025 SDI Hitto | Developed by CV. Mitra Utama Consultindo (MUC)
+  </div>
 
 </body>
 </html>
