@@ -33,6 +33,10 @@
       margin: 0;
       font-size: 26px;
     }
+    .school-title small {
+      font-size: 14px;
+      color: #e0f2f1;
+    }
     nav {
       background-color: #00796b;
       display: flex;
@@ -58,14 +62,9 @@
     }
     .hero img {
       width: 100%;
-      height: 380px;
+      height: 360px;
       object-fit: cover;
       display: block;
-      animation: fadeSlider 15s infinite;
-    }
-    @keyframes fadeSlider {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
     }
     .welcome-banner {
       position: absolute;
@@ -79,6 +78,15 @@
       font-size: 20px;
       font-weight: bold;
       font-family: 'El Messiri', serif;
+    }
+    .hero-caption {
+      max-width: 900px;
+      margin: 20px auto;
+      font-size: 16px;
+      background: #e0f2f1;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     .container {
       max-width: 1080px;
@@ -171,8 +179,12 @@
   </nav>
 
   <div class="hero">
-    <img src="uploads/slider1.jpg" alt="Slider" />
+    <img src="uploads/slider1.jpg" alt="Banner Sekolah" />
     <div class="welcome-banner">Selamat Datang di Website Resmi SDI Hitto</div>
+  </div>
+
+  <div class="hero-caption">
+    SDI Hidayatuth Tholibin adalah sekolah dasar Islam yang berkomitmen membina generasi Qurani, cerdas, dan berakhlak. Kami hadir sebagai lembaga pendidikan modern yang mengintegrasikan ilmu agama dan umum dengan lingkungan belajar yang inspiratif dan aman.
   </div>
 
   <div class="container">
