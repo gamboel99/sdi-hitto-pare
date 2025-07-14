@@ -1,62 +1,218 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>PPDB Online - SDI Hitto</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Informasi PPDB SDI Hidayatuth Tholibin - Pare Kediri" />
+  <meta name="author" content="CV. Mitra Utama Consultindo" />
+  <title>PPDB - SDI Hitto</title>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Poppins&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff8e1;
-      padding: 20px;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4fdf9 url('https://www.transparenttextures.com/patterns/arabesque.png');
+      color: #333;
     }
-
-    h1 {
-      color: #f57f17;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .note {
-      background-color: #fffde7;
-      padding: 15px;
-      border-left: 5px solid #fbc02d;
-      margin-top: 20px;
-      border-radius: 6px;
-    }
-
-    .btn {
-      display: block;
-      text-align: center;
-      margin-top: 20px;
-      background: #f57f17;
+    header {
+      background-color: #004d40;
       color: white;
-      padding: 10px;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    .school-title h1 {
+      margin: 0;
+      font-size: 26px;
+      font-family: 'El Messiri', serif;
+    }
+    .school-title small {
+      font-size: 14px;
+    }
+    nav {
+      background-color: #00796b;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 5px;
+    }
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      background-color: #004d40;
+      margin: 5px;
+      padding: 8px 14px;
       border-radius: 6px;
+      font-size: 14px;
+    }
+    nav a:hover {
+      background-color: #26a69a;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #00695c;
+      font-family: 'El Messiri', serif;
+      font-size: 24px;
+      border-bottom: 2px solid #004d40;
+      padding-bottom: 6px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      padding: 40px 20px;
+      font-size: 14px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .footer-section h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-family: 'El Messiri', serif;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin: 5px 0;
+    }
+    .footer-section ul li a {
+      color: #a7ffeb;
       text-decoration: none;
     }
-
-    .btn:hover {
-      background-color: #e65100;
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #00695c;
+      padding-top: 10px;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
-  <h1>PPDB Online</h1>
-  <div class="container">
-    <p>Penerimaan Peserta Didik Baru (PPDB) SDI Hitto tahun ajaran berikutnya akan dibuka secara online melalui laman ini.</p>
 
-    <div class="note">
-      🛠️ Halaman ini masih dalam proses pengembangan. Informasi pendaftaran, formulir, dan jadwal akan segera tersedia.
+  <header>
+    <img src="uploads/logo.png" alt="Logo SDI Hitto" />
+    <div class="school-title">
+      <h1>SDI Hidayatuth Tholibin</h1>
+      <small>Membangun Generasi Qurani, Cerdas, dan Berakhlak</small>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="struktur.html">Struktur</a>
+    <a href="fasilitas.html">Fasilitas</a>
+    <a href="ekstrakurikuler.html">Ekstrakurikuler</a>
+    <a href="agenda.html">Agenda</a>
+    <a href="dokumentasi.html">Dokumentasi</a>
+    <a href="perpustakaan.html">Perpustakaan</a>
+    <a href="ujian.html">Ujian</a>
+    <a href="ppdb.html">PPDB</a>
+    <a href="pengaduan.html">Pengaduan</a>
+    <a href="yayasan.html">Yayasan</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <div class="container">
+    <div class="section">
+      <h2>📄 Persyaratan Umum Pendaftaran</h2>
+      <ul>
+        <li>Fotokopi Akta Kelahiran (2 lembar)</li>
+        <li>Fotokopi Kartu Keluarga (2 lembar)</li>
+        <li>Pas foto ukuran 3x4 (3 lembar)</li>
+        <li>Usia minimal 6 tahun pada bulan Juli</li>
+        <li>Mengisi formulir pendaftaran secara online atau langsung</li>
+      </ul>
     </div>
 
-    <a href="index.html" class="btn">⬅️ Kembali ke Beranda</a>
+    <div class="section">
+      <h2>📆 Gelombang Pendaftaran</h2>
+      <ul>
+        <li>Gelombang 1: 1 Januari – 29 Februari</li>
+        <li>Gelombang 2: 1 Maret – 30 April</li>
+        <li>Gelombang 3: 1 Mei – 30 Juni (jika kuota masih tersedia)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🎁 Bonus & Program Unggulan</h2>
+      <ul>
+        <li>Gratis seragam untuk 10 pendaftar pertama tiap gelombang</li>
+        <li>Program Tahfidz dan BTQ intensif</li>
+        <li>Kelas Qurani dan Komputer sejak kelas 1</li>
+        <li>Ekstrakurikuler lengkap: Pramuka, Qiro’ah, Rebana, Komputer</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🔄 Mekanisme Pindahan Masuk / Keluar</h2>
+      <p><strong>Siswa Pindahan Masuk:</strong></p>
+      <ul>
+        <li>Surat pindah dari sekolah asal</li>
+        <li>Raport terakhir & hasil ujian terakhir</li>
+        <li>Surat keterangan domisili (jika dari luar daerah)</li>
+        <li>Wawancara dan seleksi oleh guru kelas & wali murid</li>
+      </ul>
+      <p><strong>Siswa Pindahan Keluar:</strong></p>
+      <ul>
+        <li>Permohonan tertulis dari orang tua/wali</li>
+        <li>Administrasi sekolah harus diselesaikan terlebih dahulu</li>
+        <li>Diberikan surat keterangan pindah dan salinan raport</li>
+      </ul>
+    </div>
   </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4>Alamat</h4>
+        <p>SDI Hidayatuth Tholibin<br>Desa Tertek, Kecamatan Pare,<br>Kabupaten Kediri, Jawa Timur</p>
+      </div>
+      <div class="footer-section">
+        <h4>Pintasan</h4>
+        <ul>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="ppdb.html">PPDB Online</a></li>
+          <li><a href="pengaduan.html">Pengaduan</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Media Sosial</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 SDI Hidayatuth Tholibin (Hitto) - Developed by CV. Mitra Utama Consultindo
+    </div>
+  </footer>
+
 </body>
 </html>
