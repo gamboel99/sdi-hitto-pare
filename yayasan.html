@@ -1,74 +1,194 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Struktur Yayasan SDI Hidayatuth Tholibin Pare Kediri" />
+  <meta name="author" content="CV. Mitra Utama Consultindo" />
   <title>Struktur Yayasan - SDI Hitto</title>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Poppins&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff3e0;
-      padding: 20px;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4fdf9 url('https://www.transparenttextures.com/patterns/arabesque.png');
+      color: #333;
     }
-
-    h1 {
-      color: #ef6c00;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    ul {
-      font-size: 16px;
-      line-height: 2;
-    }
-
-    .note {
-      background-color: #ffe0b2;
-      padding: 15px;
-      border-left: 5px solid #fb8c00;
-      margin-top: 20px;
-      border-radius: 6px;
-    }
-
-    a {
-      display: block;
-      text-align: center;
-      margin-top: 20px;
-      background: #ef6c00;
+    header {
+      background-color: #004d40;
       color: white;
-      padding: 10px;
-      text-decoration: none;
-      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
     }
-
-    a:hover {
-      background-color: #e65100;
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    .school-title h1 {
+      margin: 0;
+      font-size: 26px;
+      font-family: 'El Messiri', serif;
+    }
+    .school-title small {
+      font-size: 14px;
+    }
+    nav {
+      background-color: #00796b;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 5px;
+    }
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      background-color: #004d40;
+      margin: 5px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    nav a:hover {
+      background-color: #26a69a;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #00695c;
+      font-family: 'El Messiri', serif;
+      font-size: 24px;
+      border-bottom: 2px solid #004d40;
+      padding-bottom: 6px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      padding: 40px 20px;
+      font-size: 14px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .footer-section h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-family: 'El Messiri', serif;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin: 5px 0;
+    }
+    .footer-section ul li a {
+      color: #a7ffeb;
+      text-decoration: none;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #00695c;
+      padding-top: 10px;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
-  <h1>Struktur Yayasan</h1>
-  <div class="container">
-    <ul>
-      <li><strong>Nama Yayasan:</strong> Yayasan Hidayatuth Tholibin</li>
-      <li><strong>Ketua Yayasan:</strong> Ust. Ahmad Fulan</li>
-      <li><strong>Sekretaris:</strong> Hj. Siti Aminah</li>
-      <li><strong>Bendahara:</strong> Bapak Slamet Widodo</li>
-      <li><strong>Penanggung Jawab Pendidikan:</strong> Ibu Nanik Suryati</li>
-      <li><strong>Legalitas:</strong> Akta Notaris No. 001, Tanggal Pendirian: 5 Januari 2012</li>
-    </ul>
 
-    <div class="note">
-      🛠️ Data lengkap struktur yayasan dan dokumen legalitas akan ditambahkan setelah proses integrasi database selesai.
+  <header>
+    <img src="uploads/logo.png" alt="Logo SDI Hitto" />
+    <div class="school-title">
+      <h1>SDI Hidayatuth Tholibin</h1>
+      <small>Membangun Generasi Qurani, Cerdas, dan Berakhlak</small>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="struktur.html">Struktur</a>
+    <a href="fasilitas.html">Fasilitas</a>
+    <a href="ekstrakurikuler.html">Ekstrakurikuler</a>
+    <a href="agenda.html">Agenda</a>
+    <a href="dokumentasi.html">Dokumentasi</a>
+    <a href="perpustakaan.html">Perpustakaan</a>
+    <a href="ujian.html">Ujian</a>
+    <a href="ppdb.html">PPDB</a>
+    <a href="pengaduan.html">Pengaduan</a>
+    <a href="yayasan.html">Yayasan</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <div class="container">
+    <div class="section">
+      <h2>🏛️ Tentang Yayasan</h2>
+      <p>
+        SDI Hidayatuth Tholibin bernaung di bawah Yayasan Pendidikan Islam Hidayatuth Tholibin Pare. Yayasan ini didirikan dengan tujuan mendirikan lembaga pendidikan yang berlandaskan nilai-nilai Islam dan Al-Qur'an.
+      </p>
+      <p>
+        Yayasan bertanggung jawab dalam pengelolaan administratif, kebijakan strategis, serta pembinaan mutu lembaga pendidikan dan SDM di lingkungan SDI Hitto.
+      </p>
     </div>
 
-    <a href="index.html">⬅️ Kembali ke Beranda</a>
+    <div class="section">
+      <h2>📋 Struktur Kepengurusan Yayasan</h2>
+      <ul>
+        <li><strong>Ketua Yayasan:</strong> (diisi)</li>
+        <li><strong>Sekretaris:</strong> (diisi)</li>
+        <li><strong>Bendahara:</strong> (diisi)</li>
+        <li><strong>Penasehat:</strong> (diisi)</li>
+        <li><strong>Bidang Pendidikan:</strong> (diisi)</li>
+        <li><strong>Bidang Keuangan:</strong> (diisi)</li>
+        <li><strong>Bidang SDM & Sarpras:</strong> (diisi)</li>
+      </ul>
+    </div>
   </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4>Alamat</h4>
+        <p>SDI Hidayatuth Tholibin<br>Desa Tertek, Kecamatan Pare,<br>Kabupaten Kediri, Jawa Timur</p>
+      </div>
+      <div class="footer-section">
+        <h4>Pintasan</h4>
+        <ul>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="ppdb.html">PPDB Online</a></li>
+          <li><a href="pengaduan.html">Pengaduan</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Media Sosial</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 SDI Hidayatuth Tholibin (Hitto) - Developed by CV. Mitra Utama Consultindo
+    </div>
+  </footer>
+
 </body>
 </html>
