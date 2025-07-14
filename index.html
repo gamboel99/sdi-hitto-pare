@@ -53,20 +53,24 @@
     .container {
       max-width: 960px;
       margin: 40px auto;
-      background: white;
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
-    .container h2 {
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-left: 6px solid #4CAF50;
+    }
+    .card h2 {
       color: #2e7d32;
       margin-bottom: 15px;
     }
-    .container ul li {
+    .card ul li {
       margin-bottom: 8px;
-    }
-    section {
-      margin-top: 30px;
     }
     .image-preview {
       display: flex;
@@ -125,7 +129,7 @@
       background-color: #1b5e20;
       padding: 12px;
       font-size: 13px;
-      margin-top: 20px;
+      color: #eee;
     }
   </style>
 </head>
@@ -153,18 +157,19 @@
   </nav>
 
   <div class="container">
-    <h2>Selamat Datang di Website Resmi SDI Hitto</h2>
-    <p>SDI Hidayatuth Tholibin merupakan sekolah dasar berbasis Islam yang berada di Desa Tertek, Pare, Kediri. Website ini menyediakan informasi lengkap tentang profil sekolah, program pendidikan, kegiatan ekstrakurikuler, jadwal PPDB, hasil ujian, dan berbagai dokumentasi lainnya.</p>
+    <div class="card">
+      <h2>Selamat Datang di Website Resmi SDI Hitto</h2>
+      <p>SDI Hidayatuth Tholibin merupakan sekolah dasar berbasis Islam yang berada di Desa Tertek, Pare, Kediri. Website ini menyediakan informasi lengkap tentang profil sekolah, program pendidikan, kegiatan ekstrakurikuler, jadwal PPDB, hasil ujian, dan berbagai dokumentasi lainnya.</p>
+      <ul>
+        <li><i class="fas fa-book"></i> Sistem Informasi Sekolah Modern</li>
+        <li><i class="fas fa-graduation-cap"></i> Pendidikan Islami & Umum Terpadu</li>
+        <li><i class="fas fa-camera"></i> Dokumentasi Kegiatan & Agenda Tahunan</li>
+        <li><i class="fas fa-file-alt"></i> Pendaftaran Siswa Baru Online</li>
+        <li><i class="fas fa-comments"></i> Pengaduan & Kontak Sekolah Langsung</li>
+      </ul>
+    </div>
 
-    <ul>
-      <li><i class="fas fa-book"></i> Sistem Informasi Sekolah Modern</li>
-      <li><i class="fas fa-graduation-cap"></i> Pendidikan Islami & Umum Terpadu</li>
-      <li><i class="fas fa-camera"></i> Dokumentasi Kegiatan & Agenda Tahunan</li>
-      <li><i class="fas fa-file-alt"></i> Pendaftaran Siswa Baru Online</li>
-      <li><i class="fas fa-comments"></i> Pengaduan & Kontak Sekolah Langsung</li>
-    </ul>
-
-    <section>
+    <div class="card">
       <h2>📅 Agenda Terbaru</h2>
       <ul>
         <li>✅ Januari: Pembukaan Semester</li>
@@ -176,9 +181,9 @@
         <li>✅ Oktober: Maulid Nabi & Classmeeting</li>
       </ul>
       <p><a href="agenda.html">Lihat Agenda Lengkap »</a></p>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>📸 Dokumentasi Terbaru</h2>
       <div class="image-preview">
         <img src="uploads/dok1.jpg" alt="Kegiatan 1" />
@@ -187,7 +192,7 @@
         <img src="uploads/dok4.jpg" alt="Kegiatan 4" />
       </div>
       <p><a href="dokumentasi.html">Lihat Semua Dokumentasi »</a></p>
-    </section>
+    </div>
   </div>
 
   <footer>
@@ -216,6 +221,5 @@
   <div class="footer-bottom">
     © 2025 SDI Hitto | Developed by CV. Mitra Utama Consultindo (MUC)
   </div>
-
 </body>
 </html>
