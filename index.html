@@ -1,133 +1,134 @@
-<!DOCTYPE html>
+""<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SDI Hidayatuth Tholibin Pare - Sekolah Dasar Islam Terpadu">
-  <meta name="keywords" content="SDI Hitto, Sekolah Islam, Pare, Kediri">
+  <meta name="description" content="SDI Hidayatuth Tholibin Pare Kediri - Website Resmi Sekolah Islam Modern Berbasis Qurani">
+  <meta name="keywords" content="SDI Hitto, Sekolah Islam, Pare, Kediri, PPDB, Pendidikan Islam">
   <meta name="author" content="SDI Hidayatuth Tholibin">
   <title>SDI Hitto - Beranda</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #f6fdfc url('https://www.transparenttextures.com/patterns/arabesque.png');
+      background-color: #f4fdf8;
       color: #333;
     }
     header {
-      background-color: #007b4b;
+      background: url('uploads/pattern.png') repeat;
+      background-color: #006633;
+      padding: 20px 40px;
       color: white;
-      padding: 20px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      background-image: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+      gap: 20px;
     }
     header img {
       height: 60px;
     }
-    .title h1 {
-      font-size: 28px;
-      font-weight: 800;
-      text-shadow: 1px 1px 4px #004d2e;
+    header h1 {
+      font-size: 24px;
     }
     nav {
-      background-color: #009e60;
+      background-color: #00994d;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      padding: 10px;
+      padding: 12px;
     }
     nav a {
       color: white;
       text-decoration: none;
-      padding: 10px 15px;
-      background-color: #007b4b;
+      margin: 5px 10px;
+      padding: 8px 16px;
       border-radius: 6px;
+      background-color: #007f3f;
       font-size: 14px;
-      transition: background 0.3s ease;
     }
     nav a:hover {
-      background-color: #00cc88;
+      background-color: #33cc77;
     }
-    .container {
-      max-width: 1080px;
-      margin: 30px auto;
-      padding: 20px;
+    .slider {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
     }
-    .section-box {
-      background: #fff;
+    .slider img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      animation: fade 16s infinite;
+    }
+    @keyframes fade {
+      0% { opacity: 1; }
+      25% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    .welcome {
+      background-color: #ffffff;
+      margin: -60px auto 20px;
+      padding: 20px 30px;
+      width: 90%;
+      max-width: 960px;
       border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1;
+    }
+    .section {
+      max-width: 960px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      animation: fadeIn 1s ease-in-out;
     }
     h2 {
       color: #006633;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
-    .slider {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 10px;
-      margin-bottom: 30px;
+    ul {
+      margin-left: 20px;
     }
-    .slider img {
-      height: 260px;
-      flex-shrink: 0;
-      border-radius: 10px;
-      object-fit: cover;
-      scroll-snap-align: center;
-    }
-    footer {
-      background: #004d2e;
-      color: white;
-      padding: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    .footer {
+      background-color: #004d26;
+      color: #eee;
+      padding: 30px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
       font-size: 14px;
     }
-    footer div {
-      flex: 1 1 200px;
-    }
-    footer h4 {
-      margin-bottom: 10px;
-      color: #ffdf00;
-    }
-    footer a {
-      color: #ddd;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 6px;
-    }
-    footer a:hover {
+    .footer h3 {
       color: #fff;
+      margin-bottom: 10px;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .footer a {
+      color: #99ffcc;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .copyright {
+      text-align: center;
+      padding: 10px;
+      background-color: #00331a;
+      color: #ccc;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="uploads/logo.png" alt="Logo SDI Hitto" />
-    <div class="title">
-      <h1>SDI Hidayatuth Tholibin</h1>
-      <p style="font-size:14px; font-weight:500;">Membangun Generasi Qurani, Cerdas, dan Berakhlak</p>
-    </div>
+    <img src="uploads/logo.png" alt="Logo SDI Hitto">
+    <h1>SDI Hidayatuth Tholibin</h1>
   </header>
   <nav>
     <a href="index.html">🏠 Beranda</a>
@@ -138,52 +139,57 @@
     <a href="agenda.html">📅 Agenda</a>
     <a href="dokumentasi.html">📸 Dokumentasi</a>
     <a href="perpustakaan.html">📚 Perpustakaan</a>
-    <a href="ppdb.html">📄 PPDB</a>
+    <a href="ujian.html">📝 Hasil Ujian</a>
+    <a href="ppdb.html">📄 PPDB Online</a>
     <a href="pengaduan.html">📣 Pengaduan</a>
+    <a href="yayasan.html">🏛️ Struktur Yayasan</a>
     <a href="kontak.html">📞 Kontak</a>
   </nav>
-  <div class="container">
-    <div class="slider">
-      <img src="uploads/dok1.jpg" alt="Dokumentasi 1">
-      <img src="uploads/dok2.jpg" alt="Dokumentasi 2">
-      <img src="uploads/dok3.jpg" alt="Dokumentasi 3">
-      <img src="uploads/dok4.jpg" alt="Dokumentasi 4">
-    </div>
-    <div class="section-box">
-      <h2>Selamat Datang di Website Resmi SDI Hitto</h2>
-      <p>SDI Hidayatuth Tholibin merupakan sekolah dasar Islam yang berada di Desa Tertek, Pare, Kediri. Website ini menyajikan informasi seputar kegiatan sekolah, ekstrakurikuler, dokumentasi, serta PPDB Online.</p>
-    </div>
-    <div class="section-box">
-      <h2>📅 Agenda Terbaru</h2>
-      <ul>
-        <li>✅ Januari: Pembukaan Semester</li>
-        <li>✅ Februari: Lomba Isra' Mi'raj</li>
-        <li>✅ Maret: Try Out Ujian Sekolah</li>
-        <li>✅ April: Ujian dan Ramadhan</li>
-        <li>✅ Juni: Kenaikan Kelas</li>
-        <li>✅ Juli: MPLS & PPDB</li>
-        <li>✅ Oktober: Maulid Nabi & Classmeeting</li>
-      </ul>
-    </div>
+
+  <div class="slider">
+    <img src="uploads/dok1.jpg" alt="Slider 1">
   </div>
-  <footer>
+
+  <div class="welcome">
+    <h2>✨ Selamat Datang di Website Resmi SDI Hitto</h2>
+    <p>SDI Hidayatuth Tholibin merupakan sekolah dasar berbasis Islam yang berada di Desa Tertek, Pare, Kediri. Website ini menyediakan informasi lengkap tentang profil sekolah, program pendidikan, kegiatan ekstrakurikuler, jadwal PPDB, hasil ujian, dan berbagai dokumentasi lainnya.</p>
+  </div>
+
+  <div class="section">
+    <h2>📅 Agenda Terbaru</h2>
+    <ul>
+      <li>✅ Januari: Pembukaan Semester</li>
+      <li>✅ Februari: Lomba Isra’ Mi’raj</li>
+      <li>✅ Maret: Try Out Ujian Sekolah</li>
+      <li>✅ April: Ujian & Ramadhan</li>
+      <li>✅ Juni: Kenaikan Kelas</li>
+      <li>✅ Juli: MPLS & PPDB</li>
+      <li>✅ Oktober: Maulid Nabi & Classmeeting</li>
+    </ul>
+    <p><a href="agenda.html">Lihat Agenda Lengkap »</a></p>
+  </div>
+
+  <footer class="footer">
     <div>
-      <h4>📍 Alamat Sekolah</h4>
-      <p>SDI Hidayatuth Tholibin<br>Desa Tertek, Pare, Kediri<br>Jawa Timur 64213</p>
+      <h3>🏫 Alamat Sekolah</h3>
+      <p>SDI Hidayatuth Tholibin<br>Desa Tertek, Kecamatan Pare, Kediri</p>
     </div>
     <div>
-      <h4>🔗 Pintasan</h4>
-      <a href="index.html">Beranda</a>
-      <a href="profil.html">Profil</a>
-      <a href="agenda.html">Agenda</a>
+      <h3>📎 Pintasan</h3>
+      <a href="ppdb.html">Pendaftaran</a><br>
+      <a href="agenda.html">Agenda</a><br>
+      <a href="dokumentasi.html">Galeri</a><br>
       <a href="kontak.html">Kontak</a>
     </div>
     <div>
-      <h4>📱 Media Sosial</h4>
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
+      <h3>🔗 Media Sosial</h3>
+      <a href="#">🌐 Website</a><br>
+      <a href="#">📘 Facebook</a><br>
+      <a href="#">📷 Instagram</a>
     </div>
   </footer>
+  <div class="copyright">
+    © 2025 SDI Hidayatuth Tholibin (Hitto) - Developed by CV. Mitra Utama Consultindo
+  </div>
 </body>
 </html>
