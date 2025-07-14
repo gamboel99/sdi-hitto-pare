@@ -7,65 +7,69 @@
   <meta name="keywords" content="SDI Hitto, Sekolah Islam, Pare, Kediri, PPDB, Pendidikan Islam">
   <meta name="author" content="SDI Hidayatuth Tholibin">
   <title>SDI Hitto - Beranda</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #e9f7ef;
+      background: #f0fdf4;
+      color: #333;
     }
     header {
-      background-color: #006600;
+      background: linear-gradient(135deg, #32a852, #a4e57e);
+      padding: 30px 20px;
       color: white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
+      text-align: center;
     }
     header img {
-      height: 60px;
+      width: 80px;
+      margin-bottom: 10px;
     }
-    .title h1 {
-      margin: 0;
-      font-size: 24px;
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
     }
     nav {
-      background-color: #009933;
+      background-color: #4CAF50;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 10px;
+      padding: 12px;
+      gap: 10px;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 5px 10px;
-      padding: 8px 14px;
-      border-radius: 6px;
-      background-color: #006600;
+      background: #2e7d32;
+      padding: 8px 16px;
+      border-radius: 20px;
       font-size: 14px;
+      transition: 0.3s;
     }
     nav a:hover {
-      background-color: #00cc44;
+      background: #66bb6a;
     }
     .container {
       max-width: 960px;
-      margin: 30px auto;
+      margin: 40px auto;
       background: white;
+      border-radius: 16px;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
-    h2 {
-      color: #006600;
+    .container h2 {
+      color: #2e7d32;
+      margin-bottom: 15px;
     }
-    footer {
-      text-align: center;
-      background-color: #006600;
-      color: white;
-      padding: 15px;
-      margin-top: 40px;
-      font-size: 13px;
+    .container ul li {
+      margin-bottom: 8px;
+    }
+    section {
+      margin-top: 30px;
     }
     .image-preview {
       display: flex;
@@ -78,15 +82,24 @@
       height: 100px;
       object-fit: cover;
       border-radius: 8px;
+      border: 2px solid #e0f2f1;
+    }
+    footer {
+      text-align: center;
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="uploads/logo.png" alt="Logo SDI Hitto" />
-    <div class="title">
-      <h1>SDI Hidayatuth Tholibin</h1>
-    </div>
+    <img src="uploads/logo.png" alt="Logo SDI Hitto">
+    <h1>SDI Hidayatuth Tholibin</h1>
+    <p>Sekolah Dasar Islam Berbasis Qurani - Desa Tertek, Pare</p>
   </header>
 
   <nav>
@@ -101,13 +114,14 @@
     <a href="ppdb.html">📄 PPDB Online</a>
     <a href="pengaduan.html">📣 Pengaduan</a>
     <a href="yayasan.html">🏛️ Struktur Yayasan</a>
-    <a href="perpustakaan.html">📚 Perpustakaan Digital</a> <!-- ✅ Tambahan -->
+    <a href="perpustakaan.html">📚 Perpustakaan</a>
     <a href="kontak.html">📞 Kontak</a>
   </nav>
 
   <div class="container">
     <h2>Selamat Datang di Website Resmi SDI Hitto</h2>
     <p>SDI Hidayatuth Tholibin merupakan sekolah dasar berbasis Islam yang berada di Desa Tertek, Pare, Kediri. Website ini menyediakan informasi lengkap tentang profil sekolah, program pendidikan, kegiatan ekstrakurikuler, jadwal PPDB, hasil ujian, dan berbagai dokumentasi lainnya.</p>
+
     <ul>
       <li>📚 Sistem Informasi Sekolah Modern</li>
       <li>🎓 Pendidikan Islami & Umum Terpadu</li>
@@ -145,5 +159,6 @@
   <footer>
     © 2025 SDI Hitto | Developed by CV. Mitra Utama Consultindo (MUC)
   </footer>
+
 </body>
 </html>
