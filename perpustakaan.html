@@ -1,96 +1,205 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Perpustakaan Digital SDI Hidayatuth Tholibin" />
+  <meta name="author" content="CV. Mitra Utama Consultindo" />
   <title>Perpustakaan - SDI Hitto</title>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Poppins&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #e8f5e9;
       margin: 0;
-      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background: #f4fdf9 url('https://www.transparenttextures.com/patterns/arabesque.png');
+      color: #333;
     }
-
     header {
-      background-color: #006600;
+      background-color: #004d40;
       color: white;
-      padding: 15px;
-      text-align: center;
-      border-radius: 0 0 10px 10px;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
-      background-color: #ffffff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .book-list {
-      margin-top: 20px;
-    }
-
-    .book-list ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    .note {
-      margin-top: 30px;
-      background-color: #fff9c4;
-      padding: 15px;
-      border-left: 5px solid #fbc02d;
-      border-radius: 6px;
-    }
-
-    a.button {
-      display: inline-block;
-      margin-top: 30px;
+      display: flex;
+      align-items: center;
       padding: 10px 20px;
-      background-color: #006600;
+    }
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    .school-title {
+      font-family: 'El Messiri', serif;
+    }
+    .school-title h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    nav {
+      background-color: #00796b;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 5px;
+    }
+    nav a {
+      display: inline-block;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      background-color: #004d40;
+      margin: 5px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
     }
-
-    a.button:hover {
-      background-color: #004d00;
+    nav a:hover {
+      background-color: #26a69a;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #00695c;
+      font-family: 'El Messiri', serif;
+      font-size: 24px;
+      border-bottom: 2px solid #004d40;
+      padding-bottom: 5px;
+    }
+    .book-list {
+      list-style: none;
+      padding: 0;
+    }
+    .book-list li {
+      background: #e0f2f1;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin: 10px 0;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .book-list li a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      padding: 40px 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .footer-section h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-family: 'El Messiri', serif;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin: 5px 0;
+    }
+    .footer-section ul li a {
+      color: #a7ffeb;
+      text-decoration: none;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #00695c;
+      padding-top: 10px;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>📚 Perpustakaan Digital SDI Hitto</h1>
+    <img src="uploads/logo.png" alt="Logo SDI Hitto" />
+    <div class="school-title">
+      <h1>SDI Hidayatuth Tholibin</h1>
+      <small>Membangun Generasi Qurani, Cerdas, dan Berakhlak</small>
+    </div>
   </header>
 
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="struktur.html">Struktur</a>
+    <a href="fasilitas.html">Fasilitas</a>
+    <a href="ekstrakurikuler.html">Ekstrakurikuler</a>
+    <a href="agenda.html">Agenda</a>
+    <a href="dokumentasi.html">Dokumentasi</a>
+    <a href="perpustakaan.html">Perpustakaan</a>
+    <a href="ujian.html">Hasil Ujian</a>
+    <a href="ppdb.html">PPDB</a>
+    <a href="pengaduan.html">Pengaduan</a>
+    <a href="yayasan.html">Struktur Yayasan</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
   <div class="container">
-    <h2>Daftar Buku yang Tersedia</h2>
-    <div class="book-list">
-      <ul>
-        <li>Buku Tematik Kelas 1–6 (Semester 1 & 2)</li>
-        <li>Ensiklopedia Sains Anak</li>
-        <li>Kisah 25 Nabi dan Rasul</li>
-        <li>Juz Amma Bergambar</li>
-        <li>Komik Pendidikan Islami</li>
-        <li>Seri Cerita Anak Cerdas & Sholeh</li>
-        <li>Buku Praktik Ibadah Sehari-hari</li>
-      </ul>
-    </div>
-
-    <div class="note">
-      📌 Fitur perpustakaan digital masih dalam pengembangan.  
-      Dalam waktu dekat, siswa akan dapat mengakses buku secara online langsung dari halaman ini.
-    </div>
-
-    <a href="index.html" class="button">⬅️ Kembali ke Beranda</a>
+    <h2>Perpustakaan Digital</h2>
+    <ul class="book-list">
+      <li>
+        <span>📘 Buku Pendidikan Agama Islam Kelas 1</span>
+        <a href="uploads/buku1.pdf" target="_blank">Baca</a>
+      </li>
+      <li>
+        <span>📗 Buku Tematik SD Kelas 2 - Tema 1</span>
+        <a href="uploads/buku2.pdf" target="_blank">Baca</a>
+      </li>
+      <li>
+        <span>📙 Buku Akhlak Mulia untuk Anak SD</span>
+        <a href="uploads/buku3.pdf" target="_blank">Baca</a>
+      </li>
+      <li>
+        <span>📕 Buku Siroh Nabawiyah Anak</span>
+        <a href="uploads/buku4.pdf" target="_blank">Baca</a>
+      </li>
+    </ul>
   </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4>Alamat</h4>
+        <p>SDI Hidayatuth Tholibin<br>Desa Tertek, Kecamatan Pare,<br>Kabupaten Kediri, Jawa Timur</p>
+      </div>
+      <div class="footer-section">
+        <h4>Pintasan</h4>
+        <ul>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="ppdb.html">PPDB Online</a></li>
+          <li><a href="pengaduan.html">Pengaduan</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Media Sosial</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 SDI Hidayatuth Tholibin (Hitto) - Developed by CV. Mitra Utama Consultindo
+    </div>
+  </footer>
 
 </body>
 </html>
