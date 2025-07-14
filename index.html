@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SDI Hidayatuth Tholibin Pare Kediri - Website Resmi Sekolah Islam Modern Berbasis Qurani">
-  <meta name="keywords" content="SDI Hitto, Sekolah Islam, Pare, Kediri, PPDB, Pendidikan Islam">
+  <meta name="description" content="Website Resmi SDI Hidayatuth Tholibin Pare Kediri - Sekolah Islam Modern">
+  <meta name="keywords" content="SDI Hitto, Sekolah Islam, Pare Kediri, PPDB, Pendidikan Islam, Qurani">
   <meta name="author" content="SDI Hidayatuth Tholibin">
   <title>SDI Hitto - Beranda</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -15,30 +16,30 @@
       background-color: #f4fbf6;
     }
     header {
-      background: linear-gradient(135deg, #388e3c, #a5d6a7);
+      background: url('uploads/header-bg-pattern.png'), linear-gradient(135deg, #2e7d32, #66bb6a);
+      background-size: cover;
       color: white;
-      padding: 40px 20px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
+      padding: 50px 20px;
+      text-align: center;
     }
     header img {
-      height: 70px;
+      height: 80px;
+      margin-bottom: 10px;
     }
     .title h1 {
-      margin: 0;
-      font-size: 26px;
+      margin: 10px 0 5px;
+      font-size: 32px;
+      font-weight: bold;
     }
     .title p {
-      margin: 4px 0 0;
-      font-size: 14px;
+      margin: 0;
+      font-size: 15px;
       font-style: italic;
-      color: #eefce6;
+      color: #dcedc8;
     }
+
     nav {
-      background-color: #2e7d32;
+      background-color: #1b5e20;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -47,25 +48,22 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin: 6px;
+      margin: 5px 8px;
       padding: 8px 14px;
       border-radius: 6px;
-      background-color: #1b5e20;
+      background-color: #388e3c;
       font-size: 14px;
     }
     nav a:hover {
-      background-color: #4caf50;
+      background-color: #66bb6a;
     }
 
-    /* SLIDER FADE */
+    /* SLIDER FULL WIDTH */
     .slider {
-      max-width: 1000px;
+      width: 100%;
       height: 300px;
-      margin: 30px auto;
       position: relative;
       overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     .slides img {
       width: 100%;
@@ -81,24 +79,26 @@
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1080px;
       margin: 30px auto;
       padding: 0 20px;
     }
+
     .box {
       background: white;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       margin-bottom: 25px;
     }
     .box.agenda {
-      background: #e8f5e9;
+      background-color: #e8f5e9;
     }
     .box h2 {
       color: #2e7d32;
       margin-top: 0;
     }
+
     footer {
       background-color: #1b5e20;
       color: white;
@@ -110,7 +110,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      max-width: 1000px;
+      max-width: 1080px;
       margin: 0 auto;
     }
     .footer-col {
@@ -142,7 +142,6 @@
     }
     .social-icons a {
       margin-right: 10px;
-      display: inline-block;
       color: #c8e6c9;
       font-size: 18px;
     }
@@ -157,7 +156,7 @@
 <body>
 
   <header>
-    <img src="uploads/logo.png" alt="Logo SDI Hitto" />
+    <img src="uploads/logo.png" alt="Logo SDI Hitto">
     <div class="title">
       <h1>SDI Hidayatuth Tholibin</h1>
       <p>Membangun Generasi Qurani, Cerdas, dan Berakhlak</p>
@@ -175,7 +174,7 @@
     <a href="ujian.html">📝 Hasil Ujian</a>
     <a href="ppdb.html">📄 PPDB Online</a>
     <a href="pengaduan.html">📣 Pengaduan</a>
-    <a href="yayasan.html">🏛️ Struktur Yayasan</a>
+    <a href="yayasan.html">🏛️ Yayasan</a>
     <a href="perpustakaan.html">📚 Perpustakaan</a>
     <a href="kontak.html">📞 Kontak</a>
   </nav>
@@ -183,9 +182,9 @@
   <!-- SLIDER -->
   <div class="slider">
     <div class="slides">
-      <img src="uploads/dok1.jpg" class="active" alt="Dok 1">
-      <img src="uploads/dok2.jpg" alt="Dok 2">
-      <img src="uploads/dok3.jpg" alt="Dok 3">
+      <img src="uploads/dok1.jpg" class="active" alt="Dokumentasi 1">
+      <img src="uploads/dok2.jpg" alt="Dokumentasi 2">
+      <img src="uploads/dok3.jpg" alt="Dokumentasi 3">
     </div>
   </div>
 
@@ -217,7 +216,6 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-columns">
       <div class="footer-col">
@@ -237,9 +235,10 @@
         <h4>Kontak</h4>
         <p>Telp: 0821-xxxx-xxxx<br>Email: sdi.hitto@gmail.com</p>
         <div class="social-icons">
-          <a href="#">🌐</a>
-          <a href="#">📘</a>
-          <a href="#">📸</a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
@@ -249,7 +248,6 @@
   </footer>
 
   <script>
-    // Slider Fade Otomatis
     const images = document.querySelectorAll(".slides img");
     let current = 0;
 
