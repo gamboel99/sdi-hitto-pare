@@ -7,145 +7,161 @@
   <meta name="keywords" content="SDI Hitto, Sekolah Islam, Pare, Kediri, PPDB, Pendidikan Islam">
   <meta name="author" content="SDI Hidayatuth Tholibin">
   <title>SDI Hitto - Beranda</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #f0fdf4;
-      color: #333;
+      margin: 0;
+      background-color: #f4fbf6;
     }
     header {
-      background: linear-gradient(135deg, #32a852, #a4e57e);
-      padding: 30px 20px;
+      background: linear-gradient(135deg, #388e3c, #a5d6a7);
       color: white;
-      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     header img {
-      width: 80px;
-      margin-bottom: 10px;
+      height: 70px;
     }
-    header h1 {
-      font-size: 28px;
-      margin-bottom: 5px;
+    .title h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    .title p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      font-style: italic;
+      color: #eefce6;
     }
     nav {
-      background-color: #4CAF50;
+      background-color: #2e7d32;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 12px;
-      gap: 10px;
+      padding: 10px;
     }
     nav a {
       color: white;
       text-decoration: none;
-      background: #2e7d32;
-      padding: 8px 16px;
-      border-radius: 20px;
+      margin: 6px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background-color: #1b5e20;
       font-size: 14px;
-      transition: 0.3s;
     }
     nav a:hover {
-      background: #66bb6a;
+      background-color: #4caf50;
     }
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+
+    /* SLIDER FADE */
+    .slider {
+      max-width: 1000px;
+      height: 300px;
+      margin: 30px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
-    .card {
-      background: #ffffff;
-      padding: 35px;
-      border-radius: 20px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-      border-left: 8px solid #81c784;
-    }
-    .card:nth-child(2) {
-      background-color: #e8f5e9;
-      border-left-color: #66bb6a;
-    }
-    .card:nth-child(3) {
-      background-color: #f1f8e9;
-      border-left-color: #aed581;
-    }
-    .card h2 {
-      color: #2e7d32;
-      margin-bottom: 15px;
-    }
-    .card ul li {
-      margin-bottom: 8px;
-    }
-    .image-preview {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .image-preview img {
-      width: 160px;
-      height: 100px;
+    .slides img {
+      width: 100%;
+      height: 300px;
       object-fit: cover;
-      border-radius: 8px;
-      border: 2px solid #e0f2f1;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+    .slides img.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+    .box.agenda {
+      background: #e8f5e9;
+    }
+    .box h2 {
+      color: #2e7d32;
+      margin-top: 0;
     }
     footer {
-      background: #2e7d32;
+      background-color: #1b5e20;
       color: white;
       padding: 40px 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+    .footer-columns {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
     .footer-col {
       flex: 1 1 200px;
+      margin: 10px;
     }
     .footer-col h4 {
-      margin-bottom: 15px;
-      font-size: 16px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #66bb6a;
+      padding-bottom: 5px;
     }
     .footer-col ul {
       list-style: none;
+      padding: 0;
+      margin: 0;
     }
     .footer-col ul li {
       margin-bottom: 8px;
     }
     .footer-col ul li a {
-      color: white;
+      color: #c8e6c9;
       text-decoration: none;
-      transition: 0.3s;
     }
     .footer-col ul li a:hover {
       text-decoration: underline;
     }
+    .social-icons {
+      margin-top: 10px;
+    }
     .social-icons a {
-      color: white;
-      margin-right: 12px;
-      font-size: 20px;
-      transition: 0.3s;
+      margin-right: 10px;
+      display: inline-block;
+      color: #c8e6c9;
+      font-size: 18px;
     }
-    .social-icons a:hover {
-      color: #d0f5c1;
-    }
-    .footer-bottom {
+    .copyright {
       text-align: center;
-      background-color: #1b5e20;
-      padding: 12px;
+      margin-top: 25px;
       font-size: 13px;
-      color: #eee;
+      color: #a5d6a7;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="uploads/logo.png" alt="Logo SDI Hitto">
-    <h1>SDI Hidayatuth Tholibin</h1>
-    <p>Sekolah Dasar Islam Berbasis Qurani - Desa Tertek, Pare</p>
+    <img src="uploads/logo.png" alt="Logo SDI Hitto" />
+    <div class="title">
+      <h1>SDI Hidayatuth Tholibin</h1>
+      <p>Membangun Generasi Qurani, Cerdas, dan Berakhlak</p>
+    </div>
   </header>
 
   <nav>
@@ -164,20 +180,29 @@
     <a href="kontak.html">📞 Kontak</a>
   </nav>
 
+  <!-- SLIDER -->
+  <div class="slider">
+    <div class="slides">
+      <img src="uploads/dok1.jpg" class="active" alt="Dok 1">
+      <img src="uploads/dok2.jpg" alt="Dok 2">
+      <img src="uploads/dok3.jpg" alt="Dok 3">
+    </div>
+  </div>
+
   <div class="container">
-    <div class="card">
-      <h2>Selamat Datang di Website Resmi SDI Hitto</h2>
+    <div class="box">
+      <h2>👋 Selamat Datang di Website Resmi SDI Hitto</h2>
       <p>SDI Hidayatuth Tholibin merupakan sekolah dasar berbasis Islam yang berada di Desa Tertek, Pare, Kediri. Website ini menyediakan informasi lengkap tentang profil sekolah, program pendidikan, kegiatan ekstrakurikuler, jadwal PPDB, hasil ujian, dan berbagai dokumentasi lainnya.</p>
       <ul>
-        <li><i class="fas fa-book"></i> Sistem Informasi Sekolah Modern</li>
-        <li><i class="fas fa-graduation-cap"></i> Pendidikan Islami & Umum Terpadu</li>
-        <li><i class="fas fa-camera"></i> Dokumentasi Kegiatan & Agenda Tahunan</li>
-        <li><i class="fas fa-file-alt"></i> Pendaftaran Siswa Baru Online</li>
-        <li><i class="fas fa-comments"></i> Pengaduan & Kontak Sekolah Langsung</li>
+        <li>📚 Sistem Informasi Sekolah Modern</li>
+        <li>🎓 Pendidikan Islami & Umum Terpadu</li>
+        <li>📸 Dokumentasi Kegiatan & Agenda Tahunan</li>
+        <li>📄 Pendaftaran Siswa Baru Online</li>
+        <li>💬 Pengaduan & Kontak Sekolah Langsung</li>
       </ul>
     </div>
 
-    <div class="card">
+    <div class="box agenda">
       <h2>📅 Agenda Terbaru</h2>
       <ul>
         <li>✅ Januari: Pembukaan Semester</li>
@@ -190,44 +215,49 @@
       </ul>
       <p><a href="agenda.html">Lihat Agenda Lengkap »</a></p>
     </div>
-
-    <div class="card">
-      <h2>📸 Dokumentasi Terbaru</h2>
-      <div class="image-preview">
-        <img src="uploads/dok1.jpg" alt="Kegiatan 1" />
-        <img src="uploads/dok2.jpg" alt="Kegiatan 2" />
-        <img src="uploads/dok3.jpg" alt="Kegiatan 3" />
-        <img src="uploads/dok4.jpg" alt="Kegiatan 4" />
-      </div>
-      <p><a href="dokumentasi.html">Lihat Semua Dokumentasi »</a></p>
-    </div>
   </div>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="footer-col">
-      <h4>Alamat Sekolah</h4>
-      <p>SDI Hidayatuth Tholibin<br>Desa Tertek, Kec. Pare<br>Kab. Kediri, Jawa Timur</p>
-    </div>
-    <div class="footer-col">
-      <h4>Pintasan</h4>
-      <ul>
-        <li><a href="profil.html">Profil</a></li>
-        <li><a href="ppdb.html">PPDB</a></li>
-        <li><a href="pengaduan.html">Pengaduan</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Media Sosial</h4>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Alamat Sekolah</h4>
+        <p>SDI Hidayatuth Tholibin<br>Jl. Raya Tertek, Pare, Kediri, Jawa Timur 64213</p>
       </div>
+      <div class="footer-col">
+        <h4>Pintasan</h4>
+        <ul>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="ppdb.html">PPDB Online</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>Telp: 0821-xxxx-xxxx<br>Email: sdi.hitto@gmail.com</p>
+        <div class="social-icons">
+          <a href="#">🌐</a>
+          <a href="#">📘</a>
+          <a href="#">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 SDI Hitto | Developed by CV. Mitra Utama Consultindo (MUC)
     </div>
   </footer>
-  <div class="footer-bottom">
-    © 2025 SDI Hitto | Developed by CV. Mitra Utama Consultindo (MUC)
-  </div>
+
+  <script>
+    // Slider Fade Otomatis
+    const images = document.querySelectorAll(".slides img");
+    let current = 0;
+
+    setInterval(() => {
+      images[current].classList.remove("active");
+      current = (current + 1) % images.length;
+      images[current].classList.add("active");
+    }, 4000);
+  </script>
 </body>
 </html>
