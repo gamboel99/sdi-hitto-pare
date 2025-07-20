@@ -47,6 +47,13 @@
       border-radius: 12px;
     }
 
+    .error-message {
+      text-align: center;
+      color: red;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
+
     footer {
       background-color: #146C43;
       color: white;
@@ -69,10 +76,14 @@
     <p>Baca Buku Digital Perpustakaan</p>
   </header>
 
-  <main class="viewer-container">
+  <main class="viewer-container" id="viewer">
     <h2 id="judul-buku">Judul Buku</h2>
     <iframe id="pdf-viewer" src=""></iframe>
   </main>
+
+  <div class="error-message" id="error-msg" style="display:none;">
+    Maaf, file buku tidak ditemukan. Pastikan link sudah benar.
+  </div>
 
   <footer>
     <div>
@@ -87,7 +98,11 @@
 
     if (file) {
       document.getElementById("pdf-viewer").src = "uploads/" + file;
+    } else {
+      document.getElementById("viewer").style.display = "none";
+      document.getElementById("error-msg").style.display = "block";
     }
+
     if (judul) {
       document.getElementById("judul-buku").innerText = judul;
     }
