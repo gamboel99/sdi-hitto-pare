@@ -1,43 +1,166 @@
-<!-- Tambahkan input pencarian di atas daftar buku -->
-<main class="container">
-  <h2 style="text-align:center; color:#146C43;">📚 Daftar Buku Digital</h2>
-  
-  <input type="text" id="searchInput" placeholder="Cari judul buku..." style="width:100%; padding: 0.5rem; margin: 1rem 0; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perpustakaan Digital | SDI Ulumiyah Al-Makruf</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+    }
 
-  <div class="book-list" id="bookList">
-    <!-- Item buku tetap sama seperti sebelumnya -->
-    <div class="book-item">
-      <h3>Buku PAI Kelas 1</h3>
-      <p>Materi Pendidikan Agama Islam SD kelas 1</p>
-      <a href="baca-buku.html?file=buku1.pdf&judul=Buku PAI Kelas 1" target="_blank">📖 Baca Buku</a>
-    </div>
-    <div class="book-item">
-      <h3>Buku Bahasa Arab Dasar</h3>
-      <p>Belajar Bahasa Arab untuk anak SD</p>
-      <a href="baca-buku.html?file=buku2.pdf&judul=Buku Bahasa Arab Dasar" target="_blank">📖 Baca Buku</a>
-    </div>
-    <div class="book-item">
-      <h3>Buku Akidah Akhlak</h3>
-      <p>Pengenalan nilai-nilai akhlakul karimah</p>
-      <a href="baca-buku.html?file=buku3.pdf&judul=Buku Akidah Akhlak" target="_blank">📖 Baca Buku</a>
-    </div>
-    <div class="book-item">
-      <h3>Buku Fiqih Anak</h3>
-      <p>Pelajaran Fiqih dasar untuk siswa SD</p>
-      <a href="baca-buku.html?file=buku4.pdf&judul=Buku Fiqih Anak" target="_blank">📖 Baca Buku</a>
-    </div>
-  </div>
-</main>
+    header {
+      background-color: #146C43;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
 
-<script>
-  const searchInput = document.getElementById('searchInput');
-  const bookItems = document.querySelectorAll('.book-item');
+    nav {
+      background-color: #198754;
+      padding: 0.5rem 1rem;
+      text-align: center;
+    }
 
-  searchInput.addEventListener('input', function () {
-    const query = this.value.toLowerCase();
-    bookItems.forEach(item => {
-      const title = item.querySelector('h3').innerText.toLowerCase();
-      item.style.display = title.includes(query) ? 'block' : 'none';
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main.container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .book-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .book-item {
+      border: 1px solid #ccc;
+      border-left: 8px solid #198754;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: #f1fdf4;
+    }
+
+    .book-item h3 {
+      margin: 0;
+      color: #146C43;
+    }
+
+    .book-item p {
+      margin: 0.5rem 0;
+    }
+
+    .book-item a {
+      text-decoration: none;
+      color: white;
+      background-color: #146C43;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    footer {
+      background-color: #146C43;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 1rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Perpustakaan Digital SDI Ulumiyah Al-Makruf</h1>
+    <p>Akses Buku Pelajaran dan Bacaan Islami</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="kegiatan.html">Kegiatan</a>
+    <a href="berita.html">Berita</a>
+    <a href="pengumuman.html">Pengumuman</a>
+    <a href="link.html">Link</a>
+    <a href="alumni.html">Alumni</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="perpustakaan.html">Perpustakaan</a>
+  </nav>
+
+  <main class="container">
+    <h2 style="text-align:center; color:#146C43;">📖 Daftar Buku Digital</h2>
+
+    <input type="text" id="searchInput" placeholder="Cari judul buku...">
+
+    <div class="book-list" id="bookList">
+      <div class="book-item">
+        <h3>Buku PAI Kelas 1</h3>
+        <p>Materi Pendidikan Agama Islam SD kelas 1</p>
+        <a href="baca-buku.html?file=buku1.pdf&judul=Buku PAI Kelas 1" target="_blank">📖 Baca Buku</a>
+      </div>
+      <div class="book-item">
+        <h3>Buku Bahasa Arab Dasar</h3>
+        <p>Belajar Bahasa Arab untuk anak SD</p>
+        <a href="baca-buku.html?file=buku2.pdf&judul=Buku Bahasa Arab Dasar" target="_blank">📖 Baca Buku</a>
+      </div>
+      <div class="book-item">
+        <h3>Buku Akidah Akhlak</h3>
+        <p>Pengenalan nilai-nilai akhlakul karimah</p>
+        <a href="baca-buku.html?file=buku3.pdf&judul=Buku Akidah Akhlak" target="_blank">📖 Baca Buku</a>
+      </div>
+      <div class="book-item">
+        <h3>Buku Fiqih Anak</h3>
+        <p>Pelajaran Fiqih dasar untuk siswa SD</p>
+        <a href="baca-buku.html?file=buku4.pdf&judul=Buku Fiqih Anak" target="_blank">📖 Baca Buku</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SDI Ulumiyah Al-Makruf | Perpustakaan Digital</p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const bookItems = document.querySelectorAll('.book-item');
+
+    searchInput.addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+      bookItems.forEach(item => {
+        const title = item.querySelector('h3').innerText.toLowerCase();
+        item.style.display = title.includes(query) ? 'block' : 'none';
+      });
     });
-  });
-</script>
+  </script>
+
+</body>
+</html>
