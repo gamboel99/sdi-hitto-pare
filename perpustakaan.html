@@ -3,203 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Perpustakaan Digital SDI Hidayatuth Tholibin" />
-  <meta name="author" content="CV. Mitra Utama Consultindo" />
-  <title>Perpustakaan - SDI Hitto</title>
-  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Poppins&display=swap" rel="stylesheet" />
+  <title>Perpustakaan Digital | SDI Hidayatuth Tholibin</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f4fdf9 url('https://www.transparenttextures.com/patterns/arabesque.png');
-      color: #333;
+      background: #f5f5f5 url('pattern-islamic.png') repeat;
     }
+
     header {
-      background-color: #004d40;
+      background-color: #146C43;
       color: white;
-      display: flex;
-      align-items: center;
-      padding: 10px 20px;
-    }
-    header img {
-      height: 60px;
-      margin-right: 15px;
-    }
-    .school-title {
-      font-family: 'El Messiri', serif;
-    }
-    .school-title h1 {
-      margin: 0;
-      font-size: 26px;
-    }
-    nav {
-      background-color: #00796b;
-      overflow-x: auto;
-      white-space: nowrap;
-      padding: 10px 5px;
-    }
-    nav a {
-      display: inline-block;
-      color: white;
-      text-decoration: none;
-      background-color: #004d40;
-      margin: 5px;
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-    nav a:hover {
-      background-color: #26a69a;
-    }
-    .container {
-      max-width: 1080px;
-      margin: 30px auto;
-      padding: 25px;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
-      color: #00695c;
-      font-family: 'El Messiri', serif;
-      font-size: 24px;
-      border-bottom: 2px solid #004d40;
-      padding-bottom: 5px;
-    }
-    .book-list {
-      list-style: none;
-      padding: 0;
-    }
-    .book-list li {
-      background: #e0f2f1;
-      padding: 15px 20px;
-      border-radius: 10px;
-      margin: 10px 0;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-      font-size: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .book-list li a {
-      color: #00796b;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      background-color: #004d40;
-      color: white;
-      padding: 40px 20px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-    .footer-section h4 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-family: 'El Messiri', serif;
-    }
-    .footer-section ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .footer-section ul li {
-      margin: 5px 0;
-    }
-    .footer-section ul li a {
-      color: #a7ffeb;
-      text-decoration: none;
-    }
-    .footer-bottom {
       text-align: center;
-      margin-top: 20px;
-      border-top: 1px solid #00695c;
-      padding-top: 10px;
-      font-size: 13px;
+      padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .search-box {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .search-box input {
+      width: 80%;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .book-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .book-item {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 12px;
+      background: #fcfcfc;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .book-item h3 {
+      font-size: 1.1rem;
+      color: #146C43;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-item p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .book-item a {
+      margin-top: auto;
+      background-color: #146C43;
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .book-item a:hover {
+      background-color: #0f4f31;
+    }
+
+    footer {
+      background-color: #146C43;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="uploads/logo.png" alt="Logo SDI Hitto" />
-    <div class="school-title">
-      <h1>SDI Hidayatuth Tholibin</h1>
-      <small>Membangun Generasi Qurani, Cerdas, dan Berakhlak</small>
-    </div>
+    <h1>Perpustakaan Digital</h1>
+    <p>SDI Hidayatuth Tholibin - Pare, Kediri</p>
   </header>
 
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="profil.html">Profil</a>
-    <a href="struktur.html">Struktur</a>
-    <a href="fasilitas.html">Fasilitas</a>
-    <a href="ekstrakurikuler.html">Ekstrakurikuler</a>
-    <a href="agenda.html">Agenda</a>
-    <a href="dokumentasi.html">Dokumentasi</a>
-    <a href="perpustakaan.html">Perpustakaan</a>
-    <a href="ujian.html">Hasil Ujian</a>
-    <a href="ppdb.html">PPDB</a>
-    <a href="pengaduan.html">Pengaduan</a>
-    <a href="yayasan.html">Struktur Yayasan</a>
-    <a href="kontak.html">Kontak</a>
-  </nav>
+  <main class="container">
+    <h2 style="text-align:center; color:#146C43;">📚 Daftar Buku Digital</h2>
+    
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="🔍 Cari judul buku..." onkeyup="filterBooks()" />
+    </div>
 
-  <div class="container">
-    <h2>Perpustakaan Digital</h2>
-    <ul class="book-list">
-      <li>
-        <span>📘 Buku Pendidikan Agama Islam Kelas 1</span>
-        <a href="uploads/buku1.pdf" target="_blank">Baca</a>
-      </li>
-      <li>
-        <span>📗 Buku Tematik SD Kelas 2 - Tema 1</span>
-        <a href="uploads/buku2.pdf" target="_blank">Baca</a>
-      </li>
-      <li>
-        <span>📙 Buku Akhlak Mulia untuk Anak SD</span>
-        <a href="uploads/buku3.pdf" target="_blank">Baca</a>
-      </li>
-      <li>
-        <span>📕 Buku Siroh Nabawiyah Anak</span>
-        <a href="uploads/buku4.pdf" target="_blank">Baca</a>
-      </li>
-    </ul>
-  </div>
+    <div class="book-list" id="bookList">
+      <div class="book-item">
+        <h3>Buku PAI Kelas 1</h3>
+        <p>Materi Pendidikan Agama Islam SD kelas 1</p>
+        <a href="baca-buku.html?file=buku1.pdf&judul=Buku PAI Kelas 1" target="_blank">📖 Baca Buku</a>
+      </div>
+      <div class="book-item">
+        <h3>Buku Bahasa Arab Dasar</h3>
+        <p>Belajar Bahasa Arab untuk anak SD</p>
+        <a href="baca-buku.html?file=buku2.pdf&judul=Buku Bahasa Arab Dasar" target="_blank">📖 Baca Buku</a>
+      </div>
+      <div class="book-item">
+        <h3>Buku Akidah Akhlak</h3>
+        <p>Pengenalan nilai-nilai akhlakul karimah</p>
+        <a href="baca-buku.html?file=buku3.pdf&judul=Buku Akidah Akhlak" target="_blank">📖 Baca Buku</a>
+      </div>
+      <div class="book-item">
+        <h3>Buku Fiqih Anak</h3>
+        <p>Pelajaran Fiqih dasar untuk siswa SD</p>
+        <a href="baca-buku.html?file=buku4.pdf&judul=Buku Fiqih Anak" target="_blank">📖 Baca Buku</a>
+      </div>
+    </div>
+  </main>
 
   <footer>
-    <div class="footer-grid">
-      <div class="footer-section">
-        <h4>Alamat</h4>
-        <p>SDI Hidayatuth Tholibin<br>Desa Tertek, Kecamatan Pare,<br>Kabupaten Kediri, Jawa Timur</p>
-      </div>
-      <div class="footer-section">
-        <h4>Pintasan</h4>
-        <ul>
-          <li><a href="profil.html">Profil</a></li>
-          <li><a href="ppdb.html">PPDB Online</a></li>
-          <li><a href="pengaduan.html">Pengaduan</a></li>
-          <li><a href="kontak.html">Kontak</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Media Sosial</h4>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">WhatsApp</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      © 2025 SDI Hidayatuth Tholibin (Hitto) - Developed by CV. Mitra Utama Consultindo
+    <div>
+      © 2025 SDI Hidayatuth Tholibin (Hitto) — Developed by 
+      <a href="https://mitrautama.co.id" target="_blank">CV. Mitra Utama Consultindo</a>
     </div>
   </footer>
+
+  <script>
+    function filterBooks() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const items = document.querySelectorAll(".book-item");
+
+      items.forEach(item => {
+        const title = item.querySelector("h3").textContent.toLowerCase();
+        item.style.display = title.includes(input) ? "flex" : "none";
+      });
+    }
+  </script>
 
 </body>
 </html>
