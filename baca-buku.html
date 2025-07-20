@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Baca Buku | SDI Ulumiyah Al-Makruf</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -21,14 +22,16 @@
 
     nav {
       background-color: #198754;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 0.5rem;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 8px 12px;
       font-weight: bold;
     }
 
@@ -114,7 +117,6 @@
   </footer>
 
   <script>
-    // Ambil data dari localStorage
     const judul = localStorage.getItem('judulBuku');
     const file = localStorage.getItem('fileBuku');
 
@@ -125,7 +127,7 @@
     }
 
     if (file) {
-      document.getElementById('pdfViewer').src = file;
+      document.getElementById('pdfViewer').src = 'upload/' + file;
     } else {
       document.getElementById('pdfViewer').outerHTML = '<p style="color:red;text-align:center;">File buku tidak ditemukan.</p>';
     }
