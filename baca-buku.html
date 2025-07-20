@@ -1,44 +1,198 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baca Buku | SDI Hidayatuth Tholibin</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Perpustakaan Digital | SDI Ulumiyah Al-Makruf</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f9f9f9 url('pattern-islamic.png') repeat;
+      margin: 0;
+      background-color: #f8f9fa;
     }
 
     header {
       background-color: #146C43;
-      color: #fff;
+      color: white;
       padding: 1rem;
       text-align: center;
     }
 
-    h1 {
-      font-size: 1.8rem;
+    nav {
+      background-color: #198754;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .search-box {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .search-box input {
+      padding: 0.5rem;
+      width: 70%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .book-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .book-card {
+      width: 200px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .book-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-card h3 {
+      font-size: 1rem;
       margin: 0.5rem 0;
     }
 
-    .viewer-container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 2rem;
+    .book-card a {
+      display: inline-block;
+      background-color: #198754;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
     }
 
-    .viewer-container h2 {
-      text-align: center;
-      color: #146C43;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
+    .book-card a:hover {
+      background-color: #146C43;
     }
+
+    footer {
+      background-color: #146C43;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Perpustakaan Digital</h1>
+    <p>SDI Ulumiyah Al-Makruf</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="kegiatan.html">Kegiatan</a>
+    <a href="berita.html">Berita</a>
+    <a href="pengumuman.html">Pengumuman</a>
+    <a href="link.html">Link</a>
+    <a href="alumni.html">Alumni</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="perpustakaan.html">Perpustakaan</a>
+  </nav>
+
+  <main class="container">
+    <h2>Daftar Buku</h2>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cari buku berdasarkan judul...">
+    </div>
+
+    <div class="book-list" id="bookList">
+      <div class="book-card" data-title="Buku PAI Kelas 1">
+        <img src="cover1.jpg" alt="Buku PAI Kelas 1">
+        <h3>Buku PAI Kelas 1</h3>
+        <a href="baca-buku.html" onclick="bukaBuku('Buku PAI Kelas 1', 'buku1.pdf')">Baca Buku</a>
+      </div>
+
+      <div class="book-card" data-title="Buku Bahasa Arab Dasar">
+        <img src="cover2.jpg" alt="Buku Bahasa Arab Dasar">
+        <h3>Buku Bahasa Arab Dasar</h3>
+        <a href="baca-buku.html" onclick="bukaBuku('Buku Bahasa Arab Dasar', 'buku2.pdf')">Baca Buku</a>
+      </div>
+
+      <div class="book-card" data-title="Buku Akidah Akhlak">
+        <img src="cover3.jpg" alt="Buku Akidah Akhlak">
+        <h3>Buku Akidah Akhlak</h3>
+        <a href="baca-buku.html" onclick="bukaBuku('Buku Akidah Akhlak', 'buku3.pdf')">Baca Buku</a>
+      </div>
+
+      <div class="book-card" data-title="Buku Fiqih Anak">
+        <img src="cover4.jpg" alt="Buku Fiqih Anak">
+        <h3>Buku Fiqih Anak</h3>
+        <a href="baca-buku.html" onclick="bukaBuku('Buku Fiqih Anak', 'buku4.pdf')">Baca Buku</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SDI Ulumiyah Al-Makruf. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function bukaBuku(judul, file) {
+      localStorage.setItem('judulBuku', judul);
+      localStorage.setItem('fileBuku', file);
+    }
+
+    // Fitur pencarian
+    const searchInput = document.getElementById('searchInput');
+    const bookCards = document.querySelectorAll('.book-card');
+
+    searchInput.addEventListener('input', function () {
+      const keyword = this.value.toLowerCase();
+      bookCards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        card.style.display = title.includes(keyword) ? 'block' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
 
     iframe {
       width: 100%;
