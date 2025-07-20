@@ -1,169 +1,43 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perpustakaan Digital | SDI Hidayatuth Tholibin</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f5f5f5 url('pattern-islamic.png') repeat;
-    }
+<!-- Tambahkan input pencarian di atas daftar buku -->
+<main class="container">
+  <h2 style="text-align:center; color:#146C43;">📚 Daftar Buku Digital</h2>
+  
+  <input type="text" id="searchInput" placeholder="Cari judul buku..." style="width:100%; padding: 0.5rem; margin: 1rem 0; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;">
 
-    nav {
-      background-color: #146C43;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 0.5rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0.5rem 1rem;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: #ffc107;
-    }
-
-    header {
-      background-color: #146C43;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .book-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .book-item {
-      border: 1px solid #ddd;
-      padding: 1rem;
-      border-radius: 12px;
-      background: #fcfcfc;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .book-item h3 {
-      font-size: 1.2rem;
-      color: #146C43;
-      margin-bottom: 0.5rem;
-    }
-
-    .book-item p {
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    .book-item a {
-      margin-top: auto;
-      background-color: #146C43;
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      text-align: center;
-      transition: background-color 0.3s;
-    }
-
-    .book-item a:hover {
-      background-color: #0f4f31;
-    }
-
-    footer {
-      background-color: #146C43;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #ffc107;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>SDI Hidayatuth Tholibin</h1>
-    <p>Perpustakaan Digital</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="profil.html">Profil</a>
-    <a href="prestasi.html">Prestasi</a>
-    <a href="kegiatan.html">Kegiatan</a>
-    <a href="berita.html">Berita</a>
-    <a href="pengumuman.html">Pengumuman</a>
-    <a href="link.html">Link</a>
-    <a href="alumni.html">Alumni</a>
-    <a href="galeri.html">Galeri</a>
-    <a href="perpustakaan.html" style="color:#ffc107;">Perpustakaan</a>
-    <a href="ppdb.html">PPDB</a>
-    <a href="kontak.html">Kontak</a>
-  </nav>
-
-  <main class="container">
-    <h2 style="text-align:center; color:#146C43;">📚 Daftar Buku Digital</h2>
-    <div class="book-list">
-      <div class="book-item">
-        <h3>Buku PAI Kelas 1</h3>
-        <p>Materi Pendidikan Agama Islam SD kelas 1</p>
-        <a href="baca-buku.html?file=buku1.pdf&judul=Buku PAI Kelas 1" target="_blank">📖 Baca Buku</a>
-      </div>
-      <div class="book-item">
-        <h3>Buku Bahasa Arab Dasar</h3>
-        <p>Belajar Bahasa Arab untuk anak SD</p>
-        <a href="baca-buku.html?file=buku2.pdf&judul=Buku Bahasa Arab Dasar" target="_blank">📖 Baca Buku</a>
-      </div>
-      <div class="book-item">
-        <h3>Buku Akidah Akhlak</h3>
-        <p>Pengenalan nilai-nilai akhlakul karimah</p>
-        <a href="baca-buku.html?file=buku3.pdf&judul=Buku Akidah Akhlak" target="_blank">📖 Baca Buku</a>
-      </div>
-      <div class="book-item">
-        <h3>Buku Fiqih Anak</h3>
-        <p>Pelajaran Fiqih dasar untuk siswa SD</p>
-        <a href="baca-buku.html?file=buku4.pdf&judul=Buku Fiqih Anak" target="_blank">📖 Baca Buku</a>
-      </div>
+  <div class="book-list" id="bookList">
+    <!-- Item buku tetap sama seperti sebelumnya -->
+    <div class="book-item">
+      <h3>Buku PAI Kelas 1</h3>
+      <p>Materi Pendidikan Agama Islam SD kelas 1</p>
+      <a href="baca-buku.html?file=buku1.pdf&judul=Buku PAI Kelas 1" target="_blank">📖 Baca Buku</a>
     </div>
-  </main>
-
-  <footer>
-    <div>
-      © 2025 SDI Hidayatuth Tholibin (Hitto) — Developed by 
-      <a href="https://mitrautama.co.id" target="_blank">CV. Mitra Utama Consultindo</a>
+    <div class="book-item">
+      <h3>Buku Bahasa Arab Dasar</h3>
+      <p>Belajar Bahasa Arab untuk anak SD</p>
+      <a href="baca-buku.html?file=buku2.pdf&judul=Buku Bahasa Arab Dasar" target="_blank">📖 Baca Buku</a>
     </div>
-  </footer>
+    <div class="book-item">
+      <h3>Buku Akidah Akhlak</h3>
+      <p>Pengenalan nilai-nilai akhlakul karimah</p>
+      <a href="baca-buku.html?file=buku3.pdf&judul=Buku Akidah Akhlak" target="_blank">📖 Baca Buku</a>
+    </div>
+    <div class="book-item">
+      <h3>Buku Fiqih Anak</h3>
+      <p>Pelajaran Fiqih dasar untuk siswa SD</p>
+      <a href="baca-buku.html?file=buku4.pdf&judul=Buku Fiqih Anak" target="_blank">📖 Baca Buku</a>
+    </div>
+  </div>
+</main>
 
-</body>
-</html>
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const bookItems = document.querySelectorAll('.book-item');
+
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    bookItems.forEach(item => {
+      const title = item.querySelector('h3').innerText.toLowerCase();
+      item.style.display = title.includes(query) ? 'block' : 'none';
+    });
+  });
+</script>
