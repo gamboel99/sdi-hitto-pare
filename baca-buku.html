@@ -2,14 +2,14 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Perpustakaan Digital | SDI Ulumiyah Al-Makruf</title>
+  <title>Baca Buku | SDI Ulumiyah Al-Makruf</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #f8f9fa;
+      background-color: #f0f0f0;
     }
 
     header {
@@ -38,72 +38,32 @@
 
     .container {
       max-width: 1000px;
-      margin: 2rem auto;
+      margin: 1rem auto;
       padding: 1rem;
       background-color: white;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .search-box {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .search-box input {
-      padding: 0.5rem;
-      width: 70%;
-      max-width: 400px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .book-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .book-card {
-      width: 200px;
-      background-color: #f0f0f0;
-      border-radius: 10px;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .book-card img {
+    iframe {
       width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 0.5rem;
+      height: 700px;
+      border: none;
+      border-radius: 8px;
     }
 
-    .book-card h3 {
-      font-size: 1rem;
-      margin: 0.5rem 0;
+    .btn-kembali {
+      text-align: center;
+      margin: 1rem 0;
     }
 
-    .book-card a {
-      display: inline-block;
-      background-color: #198754;
+    .btn-kembali a {
+      background-color: #146C43;
       color: white;
-      padding: 0.4rem 0.8rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 5px;
       text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    .book-card a:hover {
-      background-color: #146C43;
+      margin: 0 10px;
     }
 
     footer {
@@ -111,12 +71,37 @@
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
+  <header>
+    <h1>📘 Baca Buku Digital</h1>
+    <p id="judulBuku">Memuat buku...</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="kegiatan.html">Kegiatan</a>
+    <a href="berita.html">Berita</a>
+    <a href="pengumuman.html">Pengumuman</a>
+    <a href="link.html">Link</a>
+    <a href="alumni.html">Alumni</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="perpustakaan.html">Perpustakaan</a>
+  </nav>
+
+  <main class="container">
+    <div class="btn-kembali">
+      <a href="index.html">🏠 Kembali ke Beranda</a>
+      <a href="perpustakaan.html">📚 Kembali ke Perpustakaan</a>
+    </div>
+
+    <iframe id="pdfViewer" src=""></iframe>
+  </main>
   <header>
     <h1>📚 Perpustakaan Digital</h1>
     <p>SDI Ulumiyah Al-Makruf</p>
