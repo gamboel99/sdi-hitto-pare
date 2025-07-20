@@ -2,26 +2,15 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Perpustakaan Digital | SDI Hidayatuth Tholibin</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: #f5f5f5 url('pattern-islamic.png') repeat;
-    }
-
-    header {
-      background-color: #146C43;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
     }
 
     .container {
@@ -75,6 +64,50 @@
       background-color: #0f4f31;
     }
 
+    nav {
+      background-color: #146C43;
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0.5rem 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      color: #ffc107;
+    }
+
+    header {
+      background-color: #146C43;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin: 0.3rem 0 0.5rem;
+    }
+
     footer {
       background-color: #146C43;
       color: white;
@@ -93,9 +126,23 @@
 <body>
 
   <header>
-    <h1>Perpustakaan Digital</h1>
-    <p>SDI Hidayatuth Tholibin - Pare, Kediri</p>
+    <h1>SDI Hidayatuth Tholibin</h1>
+    <p>Pare, Kediri</p>
   </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil</a></li>
+      <li><a href="fasilitas.html">Fasilitas</a></li>
+      <li><a href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+      <li><a href="perpustakaan.html" style="color:#ffc107;">Perpustakaan</a></li>
+      <li><a href="ujian.html">Ujian</a></li>
+      <li><a href="ppdb.html">PPDB</a></li>
+      <li><a href="pengaduan.html">Pengaduan</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
 
   <main class="container">
     <h2 style="text-align:center; color:#146C43;">📚 Daftar Buku Digital</h2>
