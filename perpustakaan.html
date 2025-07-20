@@ -2,168 +2,163 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perpustakaan Digital | SDI Hidayatuth Tholibin</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f6f8f9;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5 url('pattern-islamic.png') repeat;
     }
+
     header {
-      background-color: #0d6b3d;
+      background-color: #146C43;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 1.5rem 1rem;
     }
-    nav {
-      background-color: #11693a;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
     }
-    nav a {
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background-color: #0a4f2c;
-    }
+
     .container {
       max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
+      margin: 2rem auto;
+      padding: 1.5rem;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    h2 {
-      text-align: center;
-      color: #0d6b3d;
-    }
+
     .search-box {
+      margin-bottom: 2rem;
       text-align: center;
-      margin: 20px 0;
     }
+
     .search-box input {
       width: 80%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .book-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .book-card {
-      background: #eaf4ec;
-      padding: 20px;
+      padding: 0.6rem 1rem;
       border-radius: 10px;
-      border: 1px solid #d0e8d4;
+      border: 1px solid #ccc;
+      font-size: 1rem;
     }
-    .book-card h3 {
-      color: #0d6b3d;
-      font-size: 18px;
+
+    .book-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
     }
-    .book-card p {
-      font-size: 14px;
-      color: #333;
+
+    .book-item {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 12px;
+      background: #fcfcfc;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .book-card a {
-      display: inline-block;
-      margin-top: 10px;
-      background-color: #0d6b3d;
+
+    .book-item h3 {
+      font-size: 1.1rem;
+      color: #146C43;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-item p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .book-item a {
+      margin-top: auto;
+      background-color: #146C43;
       color: white;
-      padding: 8px 12px;
-      border-radius: 6px;
       text-decoration: none;
-    }
-    footer {
-      background-color: #0d6b3d;
-      color: white;
-      padding: 30px 20px;
-      margin-top: 40px;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
       text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .book-item a:hover {
+      background-color: #0f4f31;
+    }
+
+    footer {
+      background-color: #146C43;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Perpustakaan Digital</h1>
-  <p>SDI Hidayatuth Tholibin - Pare, Kediri</p>
-</header>
+  <header>
+    <h1>Perpustakaan Digital</h1>
+    <p>SDI Hidayatuth Tholibin - Pare, Kediri</p>
+  </header>
 
-<nav>
-  <a href="index.html">Beranda</a>
-  <a href="profil.html">Profil</a>
-  <a href="struktur.html">Struktur</a>
-  <a href="fasilitas.html">Fasilitas</a>
-  <a href="ekstrakurikuler.html">Ekstrakurikuler</a>
-  <a href="perpustakaan.html" class="active">Perpustakaan</a>
-  <a href="ujian.html">Ujian</a>
-  <a href="ppdb.html">PPDB</a>
-  <a href="pengaduan.html">Pengaduan</a>
-  <a href="yayasan.html">Yayasan</a>
-  <a href="kontak.html">Kontak</a>
-</nav>
-
-<div class="container">
-  <h2>📚 Daftar Buku Digital</h2>
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="🔍 Cari judul buku...">
-  </div>
-  <div class="book-grid" id="bookList">
-    <div class="book-card">
-      <h3>Buku PAI Kelas 1</h3>
-      <p>Materi Pendidikan Agama Islam SD kelas 1</p>
-      <a href="buku1.pdf" target="_blank">📖 Baca Buku</a>
+  <main class="container">
+    <h2 style="text-align:center; color:#146C43;">📚 Daftar Buku Digital</h2>
+    
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="🔍 Cari judul buku..." onkeyup="filterBooks()" />
     </div>
-    <div class="book-card">
-      <h3>Buku Bahasa Arab Dasar</h3>
-      <p>Belajar Bahasa Arab untuk anak SD</p>
-      <a href="buku2.pdf" target="_blank">📖 Baca Buku</a>
-    </div>
-    <div class="book-card">
-      <h3>Buku Akidah Akhlak</h3>
-      <p>Pengenalan nilai-nilai akhlakul karimah</p>
-      <a href="buku3.pdf" target="_blank">📖 Baca Buku</a>
-    </div>
-    <div class="book-card">
-      <h3>Buku Fiqih Anak</h3>
-      <p>Dasar-dasar ibadah harian anak usia SD</p>
-      <a href="buku4.pdf" target="_blank">📖 Baca Buku</a>
-    </div>
-  </div>
-</div>
 
-<footer>
-  <p>&copy; 2025 SDI Hidayatuth Tholibin - Pare, Kediri</p>
-  <p>Alamat: Jl. Pendidikan No.123, Pare, Kediri | Telp: 0812-3456-7890</p>
-  <p>Ikuti kami: 
-    <a href="#" style="color:white;">Facebook</a> |
-    <a href="#" style="color:white;">Instagram</a> |
-    <a href="#" style="color:white;">YouTube</a>
-  </p>
-</footer>
+    <div class="book-list" id="bookList">
+      <div class="book-item">
+        <h3>Buku PAI Kelas 1</h3>
+        <p>Materi Pendidikan Agama Islam SD kelas 1</p>
+        <a href="baca-buku.html?file=buku1.pdf&judul=Buku PAI Kelas 1" target="_blank">📖 Baca Buku</a>
+      </div>
+      <div class="book-item">
+        <h3>Buku Bahasa Arab Dasar</h3>
+        <p>Belajar Bahasa Arab untuk anak SD</p>
+        <a href="baca-buku.html?file=buku2.pdf&judul=Buku Bahasa Arab Dasar" target="_blank">📖 Baca Buku</a>
+      </div>
+      <div class="book-item">
+        <h3>Buku Akidah Akhlak</h3>
+        <p>Pengenalan nilai-nilai akhlakul karimah</p>
+        <a href="baca-buku.html?file=buku3.pdf&judul=Buku Akidah Akhlak" target="_blank">📖 Baca Buku</a>
+      </div>
+      <div class="book-item">
+        <h3>Buku Fiqih Anak</h3>
+        <p>Pelajaran Fiqih dasar untuk siswa SD</p>
+        <a href="baca-buku.html?file=buku4.pdf&judul=Buku Fiqih Anak" target="_blank">📖 Baca Buku</a>
+      </div>
+    </div>
+  </main>
 
-<script>
-  const searchInput = document.getElementById('searchInput');
-  const books = document.querySelectorAll('.book-card');
+  <footer>
+    <div>
+      © 2025 SDI Hidayatuth Tholibin (Hitto) — Developed by 
+      <a href="https://mitrautama.co.id" target="_blank">CV. Mitra Utama Consultindo</a>
+    </div>
+  </footer>
 
-  searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase();
-    books.forEach(book => {
-      const title = book.querySelector('h3').textContent.toLowerCase();
-      book.style.display = title.includes(query) ? 'block' : 'none';
-    });
-  });
-</script>
+  <script>
+    function filterBooks() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const items = document.querySelectorAll(".book-item");
+
+      items.forEach(item => {
+        const title = item.querySelector("h3").textContent.toLowerCase();
+        item.style.display = title.includes(input) ? "flex" : "none";
+      });
+    }
+  </script>
 
 </body>
 </html>
