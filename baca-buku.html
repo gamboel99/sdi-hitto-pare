@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baca Buku | SDI Hidayatuth Tholibin</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9 url('pattern-islamic.png') repeat;
+    }
+
+    header {
+      background-color: #146C43;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem 0;
+    }
+
+    .viewer-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+
+    .viewer-container h2 {
+      text-align: center;
+      color: #146C43;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+    }
+
+    footer {
+      background-color: #146C43;
+      color: white;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SDI Hidayatuth Tholibin</h1>
+    <p>Baca Buku Digital Perpustakaan</p>
+  </header>
+
+  <main class="viewer-container">
+    <h2 id="judul-buku">Judul Buku</h2>
+    <iframe id="pdf-viewer" src=""></iframe>
+  </main>
+
+  <footer>
+    <div>
+      © 2025 SDI Hidayatuth Tholibin (Hitto) — Developed by <a href="https://mitrautama.co.id" target="_blank">CV. Mitra Utama Consultindo</a>
+    </div>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get("file");
+    const judul = params.get("judul");
+
+    if (file) {
+      document.getElementById("pdf-viewer").src = "uploads/" + file;
+    }
+    if (judul) {
+      document.getElementById("judul-buku").innerText = judul;
+    }
+  </script>
+</body>
+</html>
