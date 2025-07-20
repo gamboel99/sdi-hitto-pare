@@ -5,7 +5,6 @@
   <title>Baca Buku | SDI Ulumiyah Al-Makruf</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -22,16 +21,14 @@
 
     nav {
       background-color: #198754;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      text-align: center;
       padding: 0.5rem;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 8px 12px;
+      margin: 0 15px;
       font-weight: bold;
     }
 
@@ -41,7 +38,7 @@
 
     .container {
       max-width: 1000px;
-      margin: 2rem auto;
+      margin: 1rem auto;
       padding: 1rem;
       background-color: white;
       border-radius: 10px;
@@ -51,8 +48,8 @@
     iframe {
       width: 100%;
       height: 80vh;
-      border: 2px solid #ccc;
-      border-radius: 10px;
+      border: none;
+      border-radius: 8px;
     }
 
     .btn-kembali {
@@ -67,7 +64,7 @@
       border-radius: 5px;
       text-decoration: none;
       margin: 0 10px;
-      font-weight: bold;
+      display: inline-block;
     }
 
     .btn-kembali a:hover {
@@ -82,13 +79,20 @@
       margin-top: 2rem;
       font-size: 0.9rem;
     }
+
+    .error-message {
+      text-align: center;
+      color: red;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>📘 Baca Buku Digital</h1>
-    <p id="judulBuku">Memuat judul buku...</p>
+    <p id="judulBuku">Memuat buku...</p>
   </header>
 
   <nav>
@@ -110,6 +114,10 @@
     </div>
 
     <iframe id="pdfViewer" src=""></iframe>
+
+    <div class="error-message" id="errorMessage" style="display: none;">
+      Maaf, file buku tidak ditemukan.
+    </div>
   </main>
 
   <footer>
@@ -120,16 +128,12 @@
     const judul = localStorage.getItem('judulBuku');
     const file = localStorage.getItem('fileBuku');
 
-    if (judul) {
+    if (judul && file) {
       document.getElementById('judulBuku').innerText = judul;
-    } else {
-      document.getElementById('judulBuku').innerText = 'Judul buku tidak ditemukan';
-    }
-
-    if (file) {
       document.getElementById('pdfViewer').src = 'upload/' + file;
     } else {
-      document.getElementById('pdfViewer').outerHTML = '<p style="color:red;text-align:center;">File buku tidak ditemukan.</p>';
+      document.getElementById('pdfViewer').style.display = 'none';
+      document.getElementById('errorMessage').style.display = 'block';
     }
   </script>
 
