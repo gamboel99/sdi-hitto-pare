@@ -16,7 +16,7 @@
       background-color: #146C43;
       color: white;
       text-align: center;
-      padding: 1.5rem 1rem;
+      padding: 1rem 0;
     }
 
     header h1 {
@@ -33,22 +33,9 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .search-box {
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .search-box input {
-      width: 80%;
-      padding: 0.6rem 1rem;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
     .book-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
 
@@ -63,7 +50,7 @@
     }
 
     .book-item h3 {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #146C43;
       margin-bottom: 0.5rem;
     }
@@ -112,12 +99,7 @@
 
   <main class="container">
     <h2 style="text-align:center; color:#146C43;">📚 Daftar Buku Digital</h2>
-    
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="🔍 Cari judul buku..." onkeyup="filterBooks()" />
-    </div>
-
-    <div class="book-list" id="bookList">
+    <div class="book-list">
       <div class="book-item">
         <h3>Buku PAI Kelas 1</h3>
         <p>Materi Pendidikan Agama Islam SD kelas 1</p>
@@ -147,18 +129,6 @@
       <a href="https://mitrautama.co.id" target="_blank">CV. Mitra Utama Consultindo</a>
     </div>
   </footer>
-
-  <script>
-    function filterBooks() {
-      const input = document.getElementById("searchInput").value.toLowerCase();
-      const items = document.querySelectorAll(".book-item");
-
-      items.forEach(item => {
-        const title = item.querySelector("h3").textContent.toLowerCase();
-        item.style.display = title.includes(input) ? "flex" : "none";
-      });
-    }
-  </script>
 
 </body>
 </html>
