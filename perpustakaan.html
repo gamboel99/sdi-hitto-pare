@@ -1,183 +1,195 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Perpustakaan Digital | SDI Ulumiyah Al-Makruf</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perpustakaan Digital</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #f0f0f0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9 url('pattern-islamic.png') repeat;
     }
 
     header {
       background-color: #146C43;
       color: white;
-      padding: 1rem;
+      padding: 1.2rem;
       text-align: center;
     }
 
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
     nav {
-      background-color: #198754;
+      background-color: #0f4f31;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
       padding: 0.5rem;
     }
 
     nav a {
       color: white;
+      margin: 0 1rem;
       text-decoration: none;
-      margin: 8px 12px;
-      font-weight: bold;
+      font-weight: 500;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    .container {
-      max-width: 1000px;
+    main {
+      max-width: 960px;
       margin: 2rem auto;
       padding: 1rem;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     h2 {
       text-align: center;
+      color: #146C43;
       margin-bottom: 1rem;
     }
 
     .search-box {
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     .search-box input {
       width: 80%;
       max-width: 400px;
-      padding: 0.5rem;
+      padding: 0.6rem;
       font-size: 1rem;
-      border: 1px solid #ccc;
+      border: 2px solid #ccc;
       border-radius: 8px;
     }
 
     .book-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
     .book-item {
-      background-color: #f8f9fa;
+      background-color: #f2fdf6;
+      border-left: 5px solid #146C43;
       padding: 1rem;
       border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
 
     .book-item h3 {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
+      margin: 0 0 0.5rem 0;
+      color: #146C43;
+    }
+
+    .book-item p {
+      margin: 0.5rem 0;
     }
 
     .book-item a {
-      display: inline-block;
       background-color: #146C43;
       color: white;
       padding: 0.5rem 1rem;
-      border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 6px;
     }
 
     .book-item a:hover {
-      background-color: #0f5132;
+      background-color: #0f4f31;
     }
 
     footer {
       background-color: #146C43;
       color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
       font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>📚 Perpustakaan Digital</h1>
-    <p>SDI Ulumiyah Al-Makruf</p>
+    <h1>Perpustakaan Digital</h1>
+    <p>SDI Hidayatuth Tholibin - Pare, Kediri</p>
   </header>
 
   <nav>
     <a href="index.html">Beranda</a>
     <a href="profil.html">Profil</a>
     <a href="kegiatan.html">Kegiatan</a>
-    <a href="berita.html">Berita</a>
     <a href="pengumuman.html">Pengumuman</a>
-    <a href="link.html">Link</a>
-    <a href="alumni.html">Alumni</a>
-    <a href="galeri.html">Galeri</a>
     <a href="perpustakaan.html">Perpustakaan</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
   </nav>
 
-  <main class="container">
-    <h2>Daftar Buku</h2>
+  <main>
+    <h2>Daftar Buku Digital</h2>
 
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Cari judul buku..." onkeyup="cariBuku()">
+      <input type="text" id="searchInput" placeholder="Cari judul buku...">
     </div>
 
     <div class="book-list" id="bookList">
       <div class="book-item">
         <h3>Buku PAI Kelas 1</h3>
-        <a href="baca-buku.html" onclick="bukaBuku('Buku PAI Kelas 1', 'buku1.pdf')">Baca Buku</a>
+        <p>Materi Pendidikan Agama Islam dasar untuk kelas 1 SDI.</p>
+        <a href="baca-buku.html?file=buku1.pdf&judul=Buku PAI Kelas 1" target="_blank">📖 Baca Buku</a>
       </div>
+
       <div class="book-item">
         <h3>Buku Bahasa Arab Dasar</h3>
-        <a href="baca-buku.html" onclick="bukaBuku('Buku Bahasa Arab Dasar', 'buku2.pdf')">Baca Buku</a>
+        <p>Pembelajaran Bahasa Arab untuk anak-anak secara bertahap.</p>
+        <a href="baca-buku.html?file=buku2.pdf&judul=Buku Bahasa Arab Dasar" target="_blank">📖 Baca Buku</a>
       </div>
+
       <div class="book-item">
         <h3>Buku Akidah Akhlak</h3>
-        <a href="baca-buku.html" onclick="bukaBuku('Buku Akidah Akhlak', 'buku3.pdf')">Baca Buku</a>
+        <p>Penanaman akidah dan akhlak mulia sejak dini.</p>
+        <a href="baca-buku.html?file=buku3.pdf&judul=Buku Akidah Akhlak" target="_blank">📖 Baca Buku</a>
       </div>
+
       <div class="book-item">
         <h3>Buku Fiqih Anak</h3>
-        <a href="baca-buku.html" onclick="bukaBuku('Buku Fiqih Anak', 'buku4.pdf')">Baca Buku</a>
+        <p>Pengenalan fiqih dasar untuk siswa sekolah dasar.</p>
+        <a href="baca-buku.html?file=buku4.pdf&judul=Buku Fiqih Anak" target="_blank">📖 Baca Buku</a>
       </div>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 SDI Ulumiyah Al-Makruf. All rights reserved.</p>
+    <div>
+      © 2025 SDI Hidayatuth Tholibin (Hitto) — Developed by 
+      <a href="https://mitrautama.co.id" target="_blank">CV. Mitra Utama Consultindo</a>
+    </div>
   </footer>
 
   <script>
-    function bukaBuku(judul, file) {
-      localStorage.setItem('judulBuku', judul);
-      localStorage.setItem('fileBuku', file);
-    }
+    const searchInput = document.getElementById("searchInput");
+    const bookItems = document.querySelectorAll(".book-item");
 
-    function cariBuku() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const items = document.querySelectorAll('.book-item');
-      items.forEach(item => {
-        const title = item.querySelector('h3').innerText.toLowerCase();
-        if (title.includes(input)) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
-        }
+    searchInput.addEventListener("keyup", function () {
+      const filter = this.value.toLowerCase();
+      bookItems.forEach(item => {
+        const title = item.querySelector("h3").innerText.toLowerCase();
+        item.style.display = title.includes(filter) ? "block" : "none";
       });
-    }
+    });
   </script>
 
 </body>
